@@ -34,7 +34,6 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
 }
 
-
 class ZealyClient:
     # claim link ex: https://api.zealy.io/communities/suiswap-app/quests/b7c3412f-c534-45dc-baf7-fbaee7fdd085/claim
     def __init__(self):
@@ -51,6 +50,7 @@ class ZealyClient:
 
         # TODO: добавить эти юрлы даты и бондари в конфиг
         # TODO: не забываеем сверху оставлять комментарий что за тема вопроса, чтобы не запутаться
+
 
         #What is Suiswap
         data_1 = '------WebKitFormBoundary9ir1X9Kxnl2G7srg\r\nContent-Disposition: form-data; name="value"\r\n\r\nA unified swapping platform built on SUI\r\n------WebKitFormBoundary9ir1X9Kxnl2G7srg\r\nContent-Disposition: form-data; name="questId"\r\n\r\n192a1798-70a9-4939-9da2-73ed0374451d\r\n------WebKitFormBoundary9ir1X9Kxnl2G7srg\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundary9ir1X9Kxnl2G7srg--\r\n'
@@ -87,6 +87,7 @@ class ZealyClient:
                 headers=headers,
                 data=data_9,
             )
+
             response.raise_for_status()  # raise exception for any HTTP error status codes
             print('Claim request successful!')
         except requests.exceptions.HTTPError as err:
