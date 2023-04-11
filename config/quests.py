@@ -7,36 +7,60 @@
 
 # categories: Special Gift, Invites are skipped.
 quests = {
-    "f5161d37-8b9c-4eee-9389-72d62234e4e4": "b7c3412f-c534-45dc-baf7-fbaee7fdd085", # onboarding: 1 quest (just claim)
+    "f5161d37-8b9c-4eee-9389-72d62234e4e4": '------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb7c3412f-c534-45dc-baf7-fbaee7fdd085\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK--\r\n', # onboarding: 1 quest (just claim)
     "61688e80-62a9-4e22-8b43-8e7e95b2df2e": { # special
-        "9b5d7b91-c7b9-4b8c-8506-d0623b41f1be": "Web3Space_5670204144635964",
-        "b73771b6-f642-4410-afba-1b67a164b598": "SuiGlobal_59d879cc",
-        "cb6dfe28-0827-4af1-8370-cd8045baf2b7": "SuiEcosystem_11ed",
+        "9b5d7b91-c7b9-4b8c-8506-d0623b41f1be": '------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="value"\r\n\r\nWeb3Space_5670204144635964\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="questId"\r\n\r\n9b5d7b91-c7b9-4b8c-8506-d0623b41f1be\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS--\r\n',
+        "b73771b6-f642-4410-afba-1b67a164b598": '------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="value"\r\n\r\nSuiGlobal_59d879cc\r\n------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb73771b6-f642-4410-afba-1b67a164b598\r\n------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryNayttNEnSq86BwjE--\r\n',
+        "cb6dfe28-0827-4af1-8370-cd8045baf2b7": '------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="value"\r\n\r\nSuiEcosystem_11ed\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="questId"\r\n\r\ncb6dfe28-0827-4af1-8370-cd8045baf2b7\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW--\r\n'
     },
     "2db9007a-eaa3-4ac1-a948-0ad7e40d0669": { # join (just claim)
-        "834e8702-773a-4ea5-82cd-0b8987ad8cb9", "afddae52-4e18-4a96-97db-8c82385a1ae7", "14237ce9-121f-4288-9c2a-e596987151cf", "swap_on_suiswap???", "5b28150f-4ee6-4e03-9607-68040987628e"
+        "834e8702-773a-4ea5-82cd-0b8987ad8cb9": '------WebKitFormBoundaryIsJOK7tJBIcmrAUg\r\nContent-Disposition: form-data; name="questId"\r\n\r\n834e8702-773a-4ea5-82cd-0b8987ad8cb9\r\n------WebKitFormBoundaryIsJOK7tJBIcmrAUg\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryIsJOK7tJBIcmrAUg--\r\n',
+        "afddae52-4e18-4a96-97db-8c82385a1ae7": '------WebKitFormBoundaryiDGPDKfKNRhgQPDf\r\nContent-Disposition: form-data; name="questId"\r\n\r\nafddae52-4e18-4a96-97db-8c82385a1ae7\r\n------WebKitFormBoundaryiDGPDKfKNRhgQPDf\r\nContent-Disposition: form-data; name="type"\r\n\r\ndiscord\r\n------WebKitFormBoundaryiDGPDKfKNRhgQPDf--\r\n',
+        "14237ce9-121f-4288-9c2a-e596987151cf": "", #visit website
+        "08ebac1b-18e4-4807-80c2-b70fa1882cd9": "", # swap on suiswap
+        "5b28150f-4ee6-4e03-9607-68040987628e": '------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="value"\r\n\r\ngood\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="questId"\r\n\r\n5b28150f-4ee6-4e03-9607-68040987628e\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9--\r\n'
+        # share your feedback
     },
     "698e2a4a-352a-4642-aa78-21cccee6cdc8": { # boost (just claim)
-        "e3073a79-0ebc-465c-9e2c-7f4eeecebb0b", "1d9824e7-b2d9-4235-839d-20f7f7aa282a", "c4fb82be-d091-45b4-b4d8-bb3915563b57", "9df2617f-fcb2-4c0b-87bb-c24edeeb7697" # last 2 are lvl8+
+        "e3073a79-0ebc-465c-9e2c-7f4eeecebb0b": '------WebKitFormBoundaryeuDFXBIBAk1RSG5r\r\nContent-Disposition: form-data; name="questId"\r\n\r\ne3073a79-0ebc-465c-9e2c-7f4eeecebb0b\r\n------WebKitFormBoundaryeuDFXBIBAk1RSG5r\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryeuDFXBIBAk1RSG5r--\r\n',
+        "1d9824e7-b2d9-4235-839d-20f7f7aa282a": '------WebKitFormBoundarysrKx390auLcrDaGR\r\nContent-Disposition: form-data; name="questId"\r\n\r\n1d9824e7-b2d9-4235-839d-20f7f7aa282a\r\n------WebKitFormBoundarysrKx390auLcrDaGR\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundarysrKx390auLcrDaGR--\r\n',
+        "c4fb82be-d091-45b4-b4d8-bb3915563b57": "", # lvl8+
+        "9df2617f-fcb2-4c0b-87bb-c24edeeb7697": "" # lvl8+
     },
     "b4de062b-5143-4604-88f8-044161969fb2": { # quiz
-        "192a1798-70a9-4939-9da2-73ed0374451d": "A unified swapping platform built on SUI",
-        "fb55fe60-0ae5-485c-bdec-1f66004248de": "2022.9",
-        "ed4254cc-9ecd-41c5-aa49-46be5ecbfa0d": "A community point that can be redeemed for airdrop",
-        "622fc736-a524-4692-9620-bf00aae9eaab": "Exchange for Suiswap token after mainnet launch",
-        "a801e865-dc48-478b-a784-2e963510f7e3": "Yes",
-        "956aa052-1042-4073-871c-982bf53b9746": "Yes",
-        "6a120dfe-4e01-4fda-a1c6-d1dc9d740546": "Yes",
-        "0d3fccc4-f4f4-4785-aa60-0826382f774d": "Yes",
-        "ee561f58-8be3-4853-9faf-46212c2a8a4a": "Weighted by the Suiswap Points you have",
-        "bf6bf666-d5fe-4836-be5b-cd772fc2ac9a": "Yes, it will be automatically converted",
-        "2b034bc3-f0ac-407d-a635-102a74655309": "Yes, it will be automatically converted",
-        "6ae7a9b8-df63-49a6-bdad-470da36aa3c8": "$SSWP",
-        "c887aa09-45e8-44f3-b797-b39f16cc38e8": "Yes, you can stake the Suiswap token to earn platform rewards",
-        "fc2fac90-f886-41f3-9c8e-a7bd92679f66": "suiswap.app",
-        "2d965df8-52ed-44d6-9604-eb747c6ebaa1": "X * Y = K ( Constant Product)",
-        "9bbfdf96-1935-4e55-bb40-8c1a479d8b92": "It allows you to trade with lower slippage",
-        "a13f7af5-86e2-4453-a482-9823bc212f59": "Ethos Wallet"
+        "192a1798-70a9-4939-9da2-73ed0374451d": '------WebKitFormBoundaryfPe3Z4ry7G4BpoIo\r\nContent-Disposition: form-data; name="value"\r\n\r\nA unified swapping platform built on SUI\r\n------WebKitFormBoundaryfPe3Z4ry7G4BpoIo\r\nContent-Disposition: form-data; name="questId"\r\n\r\n192a1798-70a9-4939-9da2-73ed0374451d\r\n------WebKitFormBoundaryfPe3Z4ry7G4BpoIo\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryfPe3Z4ry7G4BpoIo--\r\n',
+        "fb55fe60-0ae5-485c-bdec-1f66004248de": '------WebKitFormBoundaryqhIOxILGoMMCLYNc\r\nContent-Disposition: form-data; name="value"\r\n\r\n2022.9\r\n------WebKitFormBoundaryqhIOxILGoMMCLYNc\r\nContent-Disposition: form-data; name="questId"\r\n\r\nfb55fe60-0ae5-485c-bdec-1f66004248de\r\n------WebKitFormBoundaryqhIOxILGoMMCLYNc\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryqhIOxILGoMMCLYNc--\r\n'
+,
+        "ed4254cc-9ecd-41c5-aa49-46be5ecbfa0d": '------WebKitFormBoundaryJKZAq0F4QDfng9VF\r\nContent-Disposition: form-data; name="value"\r\n\r\nA community point that can be redeemed for airdrop\r\n------WebKitFormBoundaryJKZAq0F4QDfng9VF\r\nContent-Disposition: form-data; name="questId"\r\n\r\ned4254cc-9ecd-41c5-aa49-46be5ecbfa0d\r\n------WebKitFormBoundaryJKZAq0F4QDfng9VF\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryJKZAq0F4QDfng9VF--\r\n'
+,
+        "622fc736-a524-4692-9620-bf00aae9eaab": '------WebKitFormBoundarytco9fchiFIJ8j2aD\r\nContent-Disposition: form-data; name="value"\r\n\r\nExchange for Suiswap token after mainnet launch\r\n------WebKitFormBoundarytco9fchiFIJ8j2aD\r\nContent-Disposition: form-data; name="questId"\r\n\r\n622fc736-a524-4692-9620-bf00aae9eaab\r\n------WebKitFormBoundarytco9fchiFIJ8j2aD\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundarytco9fchiFIJ8j2aD--\r\n'
+,
+        "a801e865-dc48-478b-a784-2e963510f7e3": '------WebKitFormBoundaryVEP1fjFeMzyFusR7\r\nContent-Disposition: form-data; name="value"\r\n\r\nYES\r\n------WebKitFormBoundaryVEP1fjFeMzyFusR7\r\nContent-Disposition: form-data; name="questId"\r\n\r\na801e865-dc48-478b-a784-2e963510f7e3\r\n------WebKitFormBoundaryVEP1fjFeMzyFusR7\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryVEP1fjFeMzyFusR7--\r\n'
+,
+        "956aa052-1042-4073-871c-982bf53b9746": '------WebKitFormBoundaryJBAcTpUQEVwz6eWc\r\nContent-Disposition: form-data; name="value"\r\n\r\nYES\r\n------WebKitFormBoundaryJBAcTpUQEVwz6eWc\r\nContent-Disposition: form-data; name="questId"\r\n\r\n956aa052-1042-4073-871c-982bf53b9746\r\n------WebKitFormBoundaryJBAcTpUQEVwz6eWc\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryJBAcTpUQEVwz6eWc--\r\n'
+,
+        "6a120dfe-4e01-4fda-a1c6-d1dc9d740546": '------WebKitFormBoundaryUjPA9cbnOuiIOkjz\r\nContent-Disposition: form-data; name="value"\r\n\r\nYES\r\n------WebKitFormBoundaryUjPA9cbnOuiIOkjz\r\nContent-Disposition: form-data; name="questId"\r\n\r\n6a120dfe-4e01-4fda-a1c6-d1dc9d740546\r\n------WebKitFormBoundaryUjPA9cbnOuiIOkjz\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryUjPA9cbnOuiIOkjz--\r\n'
+,
+        "0d3fccc4-f4f4-4785-aa60-0826382f774d": '------WebKitFormBoundaryNm548fLXgoapBNPm\r\nContent-Disposition: form-data; name="value"\r\n\r\nYES\r\n------WebKitFormBoundaryNm548fLXgoapBNPm\r\nContent-Disposition: form-data; name="questId"\r\n\r\n0d3fccc4-f4f4-4785-aa60-0826382f774d\r\n------WebKitFormBoundaryNm548fLXgoapBNPm\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryNm548fLXgoapBNPm--\r\n'
+,
+        "ee561f58-8be3-4853-9faf-46212c2a8a4a": '------WebKitFormBoundarygAjnHEasOBBq07Tf\r\nContent-Disposition: form-data; name="value"\r\n\r\nWeighted by the Suiswap Points you have\r\n------WebKitFormBoundarygAjnHEasOBBq07Tf\r\nContent-Disposition: form-data; name="questId"\r\n\r\nee561f58-8be3-4853-9faf-46212c2a8a4a\r\n------WebKitFormBoundarygAjnHEasOBBq07Tf\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundarygAjnHEasOBBq07Tf--\r\n'
+,
+        "bf6bf666-d5fe-4836-be5b-cd772fc2ac9a": '------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="value"\r\n\r\nYes, it will be automatically converted\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="questId"\r\n\r\nbf6bf666-d5fe-4836-be5b-cd772fc2ac9a\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1--\r\n'
+,
+        "2b034bc3-f0ac-407d-a635-102a74655309": '------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="value"\r\n\r\nYes, it will be automatically converted\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="questId"\r\n\r\nbf6bf666-d5fe-4836-be5b-cd772fc2ac9a\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1--\r\n'
+,
+        "6ae7a9b8-df63-49a6-bdad-470da36aa3c8": '------WebKitFormBoundaryWvih4AIgYFI95UcI\r\nContent-Disposition: form-data; name="value"\r\n\r\n$SSWP\r\n------WebKitFormBoundaryWvih4AIgYFI95UcI\r\nContent-Disposition: form-data; name="questId"\r\n\r\n6ae7a9b8-df63-49a6-bdad-470da36aa3c8\r\n------WebKitFormBoundaryWvih4AIgYFI95UcI\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryWvih4AIgYFI95UcI--\r\n'
+,
+        "c887aa09-45e8-44f3-b797-b39f16cc38e8": '------WebKitFormBoundaryOcuKe7GbD1yi4vXE\r\nContent-Disposition: form-data; name="value"\r\n\r\nYes, you can stake the Suiswap token to earn platform rewards\r\n------WebKitFormBoundaryOcuKe7GbD1yi4vXE\r\nContent-Disposition: form-data; name="questId"\r\n\r\nc887aa09-45e8-44f3-b797-b39f16cc38e8\r\n------WebKitFormBoundaryOcuKe7GbD1yi4vXE\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryOcuKe7GbD1yi4vXE--\r\n'
+,
+        "fc2fac90-f886-41f3-9c8e-a7bd92679f66": '------WebKitFormBoundarykEDlaaiSRjSulXpF\r\nContent-Disposition: form-data; name="value"\r\n\r\nhttps://suiswap.app\r\n------WebKitFormBoundarykEDlaaiSRjSulXpF\r\nContent-Disposition: form-data; name="questId"\r\n\r\nfc2fac90-f886-41f3-9c8e-a7bd92679f66\r\n------WebKitFormBoundarykEDlaaiSRjSulXpF\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundarykEDlaaiSRjSulXpF--\r\n'
+,
+        "2d965df8-52ed-44d6-9604-eb747c6ebaa1": '------WebKitFormBoundaryJTdAKaCEyDYrZxgX\r\nContent-Disposition: form-data; name="value"\r\n\r\nX * Y = K ( Constant Product)\r\n------WebKitFormBoundaryJTdAKaCEyDYrZxgX\r\nContent-Disposition: form-data; name="questId"\r\n\r\n2d965df8-52ed-44d6-9604-eb747c6ebaa1\r\n------WebKitFormBoundaryJTdAKaCEyDYrZxgX\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryJTdAKaCEyDYrZxgX--\r\n'
+,
+        "9bbfdf96-1935-4e55-bb40-8c1a479d8b92": '------WebKitFormBoundary3PuaJC8NV4lHlBAB\r\nContent-Disposition: form-data; name="value"\r\n\r\nIt allows you to trade with lower slippage\r\n------WebKitFormBoundary3PuaJC8NV4lHlBAB\r\nContent-Disposition: form-data; name="questId"\r\n\r\n9bbfdf96-1935-4e55-bb40-8c1a479d8b92\r\n------WebKitFormBoundary3PuaJC8NV4lHlBAB\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundary3PuaJC8NV4lHlBAB--\r\n'
+,
+        "a13f7af5-86e2-4453-a482-9823bc212f59": '------WebKitFormBoundaryWWfINzeDmnM2z3e7\r\nContent-Disposition: form-data; name="value"\r\n\r\nEthos Wallet\r\n------WebKitFormBoundaryWWfINzeDmnM2z3e7\r\nContent-Disposition: form-data; name="questId"\r\n\r\na13f7af5-86e2-4453-a482-9823bc212f59\r\n------WebKitFormBoundaryWWfINzeDmnM2z3e7\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryWWfINzeDmnM2z3e7--\r\n'
+
     },
     "cdd789f2-df3b-4498-b75a-ecdfe31731cd": { # twitter
         "6af63638-6c87-4caf-bade-a08ec1b42896": "", # tweet_link
