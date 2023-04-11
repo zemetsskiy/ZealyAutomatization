@@ -3,7 +3,7 @@ import aiohttp
 import requests
 
 from config.quests import quests
-from config.params import cookies, get_header, get_quiz_url
+from config.params import cookies, get_header, get_quest_url
 
 
 async def send_post_request(session, url, data, headers):
@@ -27,7 +27,7 @@ class ZealyClient:
     async def claim_quiz():
         async with aiohttp.ClientSession() as session:
             for key, data in quests["quiz"].items():
-                result = await send_post_request(session, get_quiz_url(key), data, get_header(data[2:40]))
+                result = await send_post_request(session, get_quest_url(key), data, get_header(data[2:40]))
                 print(f'Response {key[0:4]}: {result}')
 
     def claim_boost(self):
@@ -39,16 +39,22 @@ class ZealyClient:
     def claim_twitter(self):
         pass
 
-    def claim_partner_twitter(self):
-        pass
+    @staticmethod
+    async def claim_partner_twitter():
+        async with aiohttp.ClientSession() as session:
+            for key, data in quests["partner_twitter"].items():
+                result = await send_post_request(session, get_quest_url(key), data, get_header(data[2:40]))
+                print(f'Response {key[0:4]}: {result}')
 
     def claim_suiswap_friend(self):
         pass
 
+    #TODO Получать XP каждого клиента
+
 
 def main():
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(ZealyClient.claim_quiz())
+    loop.run_until_complete(ZealyClient.claim_partner_twitter())
 
 
 if __name__ == "__main__":
