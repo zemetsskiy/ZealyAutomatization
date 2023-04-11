@@ -66,11 +66,16 @@ quests = {
         "6af63638-6c87-4caf-bade-a08ec1b42896": "", # tweet_link
         "31876fc2-948e-4c04-8936-2f25a152c20e": "", # tweet_link
         "dbde2f07-5fd4-47f2-8082-a69557838633": "", # tweet_link
-        "a31cc2c6-8891-4118-b46d-2571ab357c21": "", # claim
-        "dbd40e8b-dc57-4685-8875-5282c5b458f6": "", # claim
-        "ec52e174-437d-40f7-9761-ea865e8dab5b": "", # claim
-        "2e97b94f-a3e8-454c-b0a6-11880b6028db": "", # claim
-        "4c282823-9c05-4821-9833-192196556b92": "", # claim
+        "a31cc2c6-8891-4118-b46d-2571ab357c21": '------WebKitFormBoundaryMPofDu7t1LP2wAcx\r\nContent-Disposition: form-data; name="questId"\r\n\r\na31cc2c6-8891-4118-b46d-2571ab357c21\r\n------WebKitFormBoundaryMPofDu7t1LP2wAcx\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryMPofDu7t1LP2wAcx--\r\n'
+, # claim
+        "dbd40e8b-dc57-4685-8875-5282c5b458f6": '------WebKitFormBoundaryC6eA6U5BxBcJ9d5s\r\nContent-Disposition: form-data; name="questId"\r\n\r\ndbd40e8b-dc57-4685-8875-5282c5b458f6\r\n------WebKitFormBoundaryC6eA6U5BxBcJ9d5s\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryC6eA6U5BxBcJ9d5s--\r\n'
+, # claim
+        "ec52e174-437d-40f7-9761-ea865e8dab5b": '------WebKitFormBoundarykJwkjgeRg80Cgw6V\r\nContent-Disposition: form-data; name="questId"\r\n\r\nec52e174-437d-40f7-9761-ea865e8dab5b\r\n------WebKitFormBoundarykJwkjgeRg80Cgw6V\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarykJwkjgeRg80Cgw6V--\r\n'
+, # claim
+        "2e97b94f-a3e8-454c-b0a6-11880b6028db": '------WebKitFormBoundaryxtchqIViCyl518xy\r\nContent-Disposition: form-data; name="questId"\r\n\r\n2e97b94f-a3e8-454c-b0a6-11880b6028db\r\n------WebKitFormBoundaryxtchqIViCyl518xy\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryxtchqIViCyl518xy--\r\n'
+, # claim
+        "4c282823-9c05-4821-9833-192196556b92": '------WebKitFormBoundary3hRAZQXc53lR3k99\r\nContent-Disposition: form-data; name="questId"\r\n\r\n4c282823-9c05-4821-9833-192196556b92\r\n------WebKitFormBoundary3hRAZQXc53lR3k99\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundary3hRAZQXc53lR3k99--\r\n'
+, # claim
      },
     "18f19041-8751-4f43-940f-85770f61e834": { # partner twitter follow (just claim)
         "81ac3145-1c92-4006-a142-67e10a66d4df": '------WebKitFormBoundaryWX8ZKpDeILUQTw02\r\nContent-Disposition: form-data; name="questId"\r\n\r\n81ac3145-1c92-4006-a142-67e10a66d4df\r\n------WebKitFormBoundaryWX8ZKpDeILUQTw02\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryWX8ZKpDeILUQTw02--\r\n'
