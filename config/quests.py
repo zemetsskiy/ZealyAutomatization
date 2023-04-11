@@ -97,18 +97,29 @@ quests = {
 
     },
     "d833e1f4-251e-4859-828d-afa5c7abd34d": { # suiswap friend follow
-        "273df3e9-eb21-4c70-9de2-a2d1e52a7552",
-        "ee1e3c93-3cf7-4a87-8af7-8d427d4b87f6",
-        "7e421135-2451-4df5-92c3-646b1e8a9f6a",
-        "c3a86e75-2646-4c47-bacd-2f1e74290db3",
-        "f484f0be-bdb8-4a27-91e8-9dcb2fe5ce53",
-        "93338dae-0b3e-4e1e-91de-b382d10c72ed",
-        "904cca49-d5ed-4c80-bfad-0a123e3619e3",
-        "aa77659a-8c8c-4352-94a5-d1fe0490a6f9",
-        "3c183088-6681-45c5-800c-568d3260b6e4",
-        "af2a5017-bf63-4533-a7f2-1a66ea9aafb5",
-        "96a34359-de24-47c2-b8e2-72de94f8a559",
-        "5c57942c-f359-4cf0-a59d-fb3a08ae6ab8"
+        "273df3e9-eb21-4c70-9de2-a2d1e52a7552": '------WebKitFormBoundary362DjxmuHxiW3oS7\r\nContent-Disposition: form-data; name="questId"\r\n\r\n273df3e9-eb21-4c70-9de2-a2d1e52a7552\r\n------WebKitFormBoundary362DjxmuHxiW3oS7\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundary362DjxmuHxiW3oS7--\r\n'
+,
+        "ee1e3c93-3cf7-4a87-8af7-8d427d4b87f6": '------WebKitFormBoundarytdmPRBGulUBbKAUS\r\nContent-Disposition: form-data; name="questId"\r\n\r\nee1e3c93-3cf7-4a87-8af7-8d427d4b87f6\r\n------WebKitFormBoundarytdmPRBGulUBbKAUS\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarytdmPRBGulUBbKAUS--\r\n'
+,
+        "7e421135-2451-4df5-92c3-646b1e8a9f6a": '------WebKitFormBoundary0Eh1y25DtRdGy8XV\r\nContent-Disposition: form-data; name="questId"\r\n\r\n7e421135-2451-4df5-92c3-646b1e8a9f6a\r\n------WebKitFormBoundary0Eh1y25DtRdGy8XV\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundary0Eh1y25DtRdGy8XV--\r\n'
+,
+        "c3a86e75-2646-4c47-bacd-2f1e74290db3": '------WebKitFormBoundarynYjlg9DZkO7tI5cz\r\nContent-Disposition: form-data; name="questId"\r\n\r\nc3a86e75-2646-4c47-bacd-2f1e74290db3\r\n------WebKitFormBoundarynYjlg9DZkO7tI5cz\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarynYjlg9DZkO7tI5cz--\r\n'
+,
+        "f484f0be-bdb8-4a27-91e8-9dcb2fe5ce53": '------WebKitFormBoundary8kPDLQeKiIOaKtw1\r\nContent-Disposition: form-data; name="questId"\r\n\r\nf484f0be-bdb8-4a27-91e8-9dcb2fe5ce53\r\n------WebKitFormBoundary8kPDLQeKiIOaKtw1\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundary8kPDLQeKiIOaKtw1--\r\n'
+,
+        "93338dae-0b3e-4e1e-91de-b382d10c72ed": '------WebKitFormBoundarykUVP525TGDj6LkX1\r\nContent-Disposition: form-data; name="questId"\r\n\r\n93338dae-0b3e-4e1e-91de-b382d10c72ed\r\n------WebKitFormBoundarykUVP525TGDj6LkX1\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarykUVP525TGDj6LkX1--\r\n'
+,
+        "904cca49-d5ed-4c80-bfad-0a123e3619e3": '------WebKitFormBoundaryWBvCmM1lsZC1WhwN\r\nContent-Disposition: form-data; name="questId"\r\n\r\n904cca49-d5ed-4c80-bfad-0a123e3619e3\r\n------WebKitFormBoundaryWBvCmM1lsZC1WhwN\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryWBvCmM1lsZC1WhwN--\r\n'
+,
+        "aa77659a-8c8c-4352-94a5-d1fe0490a6f9": '------WebKitFormBoundarypDroixBRsNeDNYps\r\nContent-Disposition: form-data; name="questId"\r\n\r\naa77659a-8c8c-4352-94a5-d1fe0490a6f9\r\n------WebKitFormBoundarypDroixBRsNeDNYps\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarypDroixBRsNeDNYps--\r\n'
+,
+        "3c183088-6681-45c5-800c-568d3260b6e4": '------WebKitFormBoundaryu7ozOaR6mpG2Cx6X\r\nContent-Disposition: form-data; name="questId"\r\n\r\n3c183088-6681-45c5-800c-568d3260b6e4\r\n------WebKitFormBoundaryu7ozOaR6mpG2Cx6X\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryu7ozOaR6mpG2Cx6X--\r\n'
+,
+        "af2a5017-bf63-4533-a7f2-1a66ea9aafb5": '------WebKitFormBoundaryeBvz3z7AN8WbyASW\r\nContent-Disposition: form-data; name="questId"\r\n\r\naf2a5017-bf63-4533-a7f2-1a66ea9aafb5\r\n------WebKitFormBoundaryeBvz3z7AN8WbyASW\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryeBvz3z7AN8WbyASW--\r\n'
+,
+        "96a34359-de24-47c2-b8e2-72de94f8a559": '------WebKitFormBoundary8eqTx5AZ17AlmZxl\r\nContent-Disposition: form-data; name="questId"\r\n\r\n96a34359-de24-47c2-b8e2-72de94f8a559\r\n------WebKitFormBoundary8eqTx5AZ17AlmZxl\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundary8eqTx5AZ17AlmZxl--\r\n'
+,
+        "5c57942c-f359-4cf0-a59d-fb3a08ae6ab8": '------WebKitFormBoundarydaZPFWuAjzVS9K8e\r\nContent-Disposition: form-data; name="questId"\r\n\r\n5c57942c-f359-4cf0-a59d-fb3a08ae6ab8\r\n------WebKitFormBoundarydaZPFWuAjzVS9K8e\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarydaZPFWuAjzVS9K8e--\r\n'
     }
 
 }
