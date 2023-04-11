@@ -21,13 +21,14 @@ quests = {
         "5b28150f-4ee6-4e03-9607-68040987628e": '------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="value"\r\n\r\ngood\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="questId"\r\n\r\n5b28150f-4ee6-4e03-9607-68040987628e\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9--\r\n'
         # share your feedback
     },
+
     "698e2a4a-352a-4642-aa78-21cccee6cdc8": { # boost (just claim)
         "e3073a79-0ebc-465c-9e2c-7f4eeecebb0b": '------WebKitFormBoundaryeuDFXBIBAk1RSG5r\r\nContent-Disposition: form-data; name="questId"\r\n\r\ne3073a79-0ebc-465c-9e2c-7f4eeecebb0b\r\n------WebKitFormBoundaryeuDFXBIBAk1RSG5r\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryeuDFXBIBAk1RSG5r--\r\n',
         "1d9824e7-b2d9-4235-839d-20f7f7aa282a": '------WebKitFormBoundarysrKx390auLcrDaGR\r\nContent-Disposition: form-data; name="questId"\r\n\r\n1d9824e7-b2d9-4235-839d-20f7f7aa282a\r\n------WebKitFormBoundarysrKx390auLcrDaGR\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundarysrKx390auLcrDaGR--\r\n',
         "c4fb82be-d091-45b4-b4d8-bb3915563b57": "", # lvl8+
         "9df2617f-fcb2-4c0b-87bb-c24edeeb7697": "" # lvl8+
     },
-    "b4de062b-5143-4604-88f8-044161969fb2": { # quiz
+    "quiz": { # quiz
         "192a1798-70a9-4939-9da2-73ed0374451d": '------WebKitFormBoundaryfPe3Z4ry7G4BpoIo\r\nContent-Disposition: form-data; name="value"\r\n\r\nA unified swapping platform built on SUI\r\n------WebKitFormBoundaryfPe3Z4ry7G4BpoIo\r\nContent-Disposition: form-data; name="questId"\r\n\r\n192a1798-70a9-4939-9da2-73ed0374451d\r\n------WebKitFormBoundaryfPe3Z4ry7G4BpoIo\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryfPe3Z4ry7G4BpoIo--\r\n',
         "fb55fe60-0ae5-485c-bdec-1f66004248de": '------WebKitFormBoundaryqhIOxILGoMMCLYNc\r\nContent-Disposition: form-data; name="value"\r\n\r\n2022.9\r\n------WebKitFormBoundaryqhIOxILGoMMCLYNc\r\nContent-Disposition: form-data; name="questId"\r\n\r\nfb55fe60-0ae5-485c-bdec-1f66004248de\r\n------WebKitFormBoundaryqhIOxILGoMMCLYNc\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryqhIOxILGoMMCLYNc--\r\n'
 ,
@@ -45,7 +46,7 @@ quests = {
 ,
         "ee561f58-8be3-4853-9faf-46212c2a8a4a": '------WebKitFormBoundarygAjnHEasOBBq07Tf\r\nContent-Disposition: form-data; name="value"\r\n\r\nWeighted by the Suiswap Points you have\r\n------WebKitFormBoundarygAjnHEasOBBq07Tf\r\nContent-Disposition: form-data; name="questId"\r\n\r\nee561f58-8be3-4853-9faf-46212c2a8a4a\r\n------WebKitFormBoundarygAjnHEasOBBq07Tf\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundarygAjnHEasOBBq07Tf--\r\n'
 ,
-        "bf6bf666-d5fe-4836-be5b-cd772fc2ac9a": '------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="value"\r\n\r\nYes, it will be automatically converted\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="questId"\r\n\r\nbf6bf666-d5fe-4836-be5b-cd772fc2ac9a\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1--\r\n'
+        "fbf6bf666-d5fe-4836-be5b-cd772fc2ac9a": '------WebKitFormBoundary6vAfConx2X2AkZSw\r\nContent-Disposition: form-data; name="value"\r\n\r\nYes, it will be automatically converted\r\n------WebKitFormBoundary6vAfConx2X2AkZSw\r\nContent-Disposition: form-data; name="questId"\r\n\r\nbf6bf666-d5fe-4836-be5b-cd772fc2ac9a\r\n------WebKitFormBoundary6vAfConx2X2AkZSw\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundary6vAfConx2X2AkZSw--\r\n'
 ,
         "2b034bc3-f0ac-407d-a635-102a74655309": '------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="value"\r\n\r\nYes, it will be automatically converted\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="questId"\r\n\r\nbf6bf666-d5fe-4836-be5b-cd772fc2ac9a\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryZ9AYYqcoV9Hv0Zp1--\r\n'
 ,
