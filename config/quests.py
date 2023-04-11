@@ -79,7 +79,7 @@ quests = {
         "4c282823-9c05-4821-9833-192196556b92": '------WebKitFormBoundary3hRAZQXc53lR3k99\r\nContent-Disposition: form-data; name="questId"\r\n\r\n4c282823-9c05-4821-9833-192196556b92\r\n------WebKitFormBoundary3hRAZQXc53lR3k99\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundary3hRAZQXc53lR3k99--\r\n'
 , # claim
      },
-    "18f19041-8751-4f43-940f-85770f61e834": { # partner twitter follow (just claim)
+    "partner_twitter": { # partner twitter follow (just claim)
         "81ac3145-1c92-4006-a142-67e10a66d4df": '------WebKitFormBoundaryWX8ZKpDeILUQTw02\r\nContent-Disposition: form-data; name="questId"\r\n\r\n81ac3145-1c92-4006-a142-67e10a66d4df\r\n------WebKitFormBoundaryWX8ZKpDeILUQTw02\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryWX8ZKpDeILUQTw02--\r\n'
 ,
         "c7baab49-b7f7-4bc0-8da3-b941584ddc41": '------WebKitFormBoundarypY2pbL1rsQbBwOgg\r\nContent-Disposition: form-data; name="questId"\r\n\r\nc7baab49-b7f7-4bc0-8da3-b941584ddc41\r\n------WebKitFormBoundarypY2pbL1rsQbBwOgg\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarypY2pbL1rsQbBwOgg--\r\n'
