@@ -27,7 +27,8 @@ quests = {
     "boost": { # boost (just claim)
         "e3073a79-0ebc-465c-9e2c-7f4eeecebb0b": '------WebKitFormBoundaryeuDFXBIBAk1RSG5r\r\nContent-Disposition: form-data; name="questId"\r\n\r\ne3073a79-0ebc-465c-9e2c-7f4eeecebb0b\r\n------WebKitFormBoundaryeuDFXBIBAk1RSG5r\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryeuDFXBIBAk1RSG5r--\r\n',
         "1d9824e7-b2d9-4235-839d-20f7f7aa282a": '------WebKitFormBoundarysrKx390auLcrDaGR\r\nContent-Disposition: form-data; name="questId"\r\n\r\n1d9824e7-b2d9-4235-839d-20f7f7aa282a\r\n------WebKitFormBoundarysrKx390auLcrDaGR\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundarysrKx390auLcrDaGR--\r\n',
-        "c4fb82be-d091-45b4-b4d8-bb3915563b57": "", # lvl8+
+        "c4fb82be-d091-45b4-b4d8-bb3915563b57": '------WebKitFormBoundaryoAgpVAzqsph9EwOl\r\nContent-Disposition: form-data; name="questId"\r\n\r\nc4fb82be-d091-45b4-b4d8-bb3915563b57\r\n------WebKitFormBoundaryoAgpVAzqsph9EwOl\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryoAgpVAzqsph9EwOl--\r\n'
+, # lvl8+
         "9df2617f-fcb2-4c0b-87bb-c24edeeb7697": "" # lvl8+
     },
     "quiz": { # quiz
