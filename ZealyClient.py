@@ -46,15 +46,19 @@ class ZealyClient:
                 result = await send_post_request(session, get_quest_url(key), data, get_header(data[2:40]))
                 print(f'Response {key[0:4]}: {result}')
 
-    def claim_suiswap_friend(self):
-        pass
+    @staticmethod
+    async def claim_suiswap_friend():
+        async with aiohttp.ClientSession() as session:
+            for key, data in quests["suiswap_friend"].items():
+                result = await send_post_request(session, get_quest_url(key), data, get_header(data[2:40]))
+                print(f'Response {key[0:4]}: {result}')
 
     #TODO Получать XP каждого клиента
 
 
 def main():
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(ZealyClient.claim_partner_twitter())
+    loop.run_until_complete(ZealyClient.claim_suiswap_friend())
 
 
 if __name__ == "__main__":
