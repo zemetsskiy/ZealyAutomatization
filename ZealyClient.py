@@ -2,14 +2,21 @@ import asyncio
 import aiohttp
 
 from config.quests import quests
-from config.params import cookies, get_header, get_quest_url
+from config.params import cookies, get_header, get_quest_url, profile_link, GET_header
 from config.tweet_links import tweet_links
 
 
 async def send_post_request(session, url, data, headers):
     async with session.post(url, data=data, headers=headers, cookies=cookies) as resp:
-        result =  resp.status
+        result = resp.status
         return result
+
+
+async def send_get_request(session, url, headers):
+    async with session.get(url, headers=headers, cookies=cookies) as resp:
+        response = await resp.json()
+        return response
+
 
 
 class ZealyClient:
@@ -86,10 +93,16 @@ class ZealyClient:
 
     #TODO Получать XP каждого клиента
 
+    @staticmethod
+    async def get_xp():
+        async with aiohttp.ClientSession() as session:
+            result = await send_get_request(session, profile_link, GET_header)
+            print(f'Xp: {result["xp"]}\nLevel: {result["level"]}')
+
 
 def main():
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(ZealyClient.claim_onboarding())
+    loop.run_until_complete(ZealyClient.get_xp())
 
 
 if __name__ == "__main__":
