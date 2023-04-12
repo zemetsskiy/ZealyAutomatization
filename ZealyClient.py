@@ -196,6 +196,7 @@ class ZealyClient:
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 try:
+
                     for key, data in quests["partner_twitter"].items():
                         resp, warn = await send_post_request(session,
                                                        get_quest_url(key),
@@ -236,10 +237,14 @@ class ZealyClient:
                     logger.error(f"ERROR: {err_}")
 
     @staticmethod
+    async def claim_all():
+        pass
+
+    @staticmethod
     async def get_xp(access_token):
         async with aiohttp.ClientSession() as session:
             result = await send_get_request(session, profile_link, GET_header, get_cookies(access_token))
-            print(f'Xp: {result["xp"]}\nLevel: {result["level"]}')
+            print(f'{result["discordHandle"]:20}Xp: {result["xp"]:2}   Level: {result["level"]}')
 
 
 def main():
@@ -251,6 +256,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # proxy = 'http://178.211.149.180:62908:zFsbxPgX:FrXv1qhd'
-    # print(get_url_proxies(proxy))
-    # print(get_auth_proxies(proxy)[0], get_auth_proxies(proxy)[1])
+
