@@ -25,5 +25,5 @@ def get_header(boundary):
     }
 
 
-def get_quiz_url(quiz_id):
-    return f'https://api.zealy.io/communities/suiswap-app/quests/{quiz_id}/claim'
+def get_quest_url(quest_id):
+    return f'https://api.zealy.io/communities/suiswap-app/quests/{quest_id}/claim'

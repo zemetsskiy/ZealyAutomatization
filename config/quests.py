@@ -79,7 +79,7 @@ quests = {
         "4c282823-9c05-4821-9833-192196556b92": '------WebKitFormBoundary3hRAZQXc53lR3k99\r\nContent-Disposition: form-data; name="questId"\r\n\r\n4c282823-9c05-4821-9833-192196556b92\r\n------WebKitFormBoundary3hRAZQXc53lR3k99\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundary3hRAZQXc53lR3k99--\r\n'
 , # claim
      },
-    "18f19041-8751-4f43-940f-85770f61e834": { # partner twitter follow (just claim)
+    "partner_twitter": { # partner twitter follow (just claim)
         "81ac3145-1c92-4006-a142-67e10a66d4df": '------WebKitFormBoundaryWX8ZKpDeILUQTw02\r\nContent-Disposition: form-data; name="questId"\r\n\r\n81ac3145-1c92-4006-a142-67e10a66d4df\r\n------WebKitFormBoundaryWX8ZKpDeILUQTw02\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryWX8ZKpDeILUQTw02--\r\n'
 ,
         "c7baab49-b7f7-4bc0-8da3-b941584ddc41": '------WebKitFormBoundarypY2pbL1rsQbBwOgg\r\nContent-Disposition: form-data; name="questId"\r\n\r\nc7baab49-b7f7-4bc0-8da3-b941584ddc41\r\n------WebKitFormBoundarypY2pbL1rsQbBwOgg\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarypY2pbL1rsQbBwOgg--\r\n'
@@ -103,7 +103,7 @@ quests = {
         "6f77ce4d-22d5-4167-8064-cafad0462904": '------WebKitFormBoundaryOQ2E8oIoT9NYXqAH\r\nContent-Disposition: form-data; name="questId"\r\n\r\n6f77ce4d-22d5-4167-8064-cafad0462904\r\n------WebKitFormBoundaryOQ2E8oIoT9NYXqAH\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryOQ2E8oIoT9NYXqAH--\r\n'
 
     },
-    "d833e1f4-251e-4859-828d-afa5c7abd34d": { # suiswap friend follow
+    "suiswap_friend": { # suiswap friend follow
         "273df3e9-eb21-4c70-9de2-a2d1e52a7552": '------WebKitFormBoundary362DjxmuHxiW3oS7\r\nContent-Disposition: form-data; name="questId"\r\n\r\n273df3e9-eb21-4c70-9de2-a2d1e52a7552\r\n------WebKitFormBoundary362DjxmuHxiW3oS7\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundary362DjxmuHxiW3oS7--\r\n'
 ,
         "ee1e3c93-3cf7-4a87-8af7-8d427d4b87f6": '------WebKitFormBoundarytdmPRBGulUBbKAUS\r\nContent-Disposition: form-data; name="questId"\r\n\r\nee1e3c93-3cf7-4a87-8af7-8d427d4b87f6\r\n------WebKitFormBoundarytdmPRBGulUBbKAUS\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarytdmPRBGulUBbKAUS--\r\n'
