@@ -8,7 +8,7 @@ from config.params import cookies, get_header, get_quiz_url
 
 async def send_post_request(session, url, data, headers):
     async with session.post(url, data=data, headers=headers, cookies=cookies) as resp:
-        result =  resp.status
+        result = resp.status
         return result
 
 
