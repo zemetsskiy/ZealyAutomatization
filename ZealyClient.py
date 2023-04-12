@@ -191,6 +191,7 @@ class ZealyClient:
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 try:
+
                     for key, data in quests["partner_twitter"].items():
                         resp = await send_post_request(session,
                                                        get_quest_url(key),
@@ -248,6 +249,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # proxy = 'http://178.211.149.180:62908:zFsbxPgX:FrXv1qhd'
-    # print(get_url_proxies(proxy))
-    # print(get_auth_proxies(proxy)[0], get_auth_proxies(proxy)[1])
+
