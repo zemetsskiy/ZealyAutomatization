@@ -39,7 +39,6 @@ class ZealyClient:
     def __init__(self):
         self.base_url = "https://api.zealy.io/communities/suiswap-app/quests"
 
-
     async def claim_onboarding(self):
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
@@ -249,15 +248,3 @@ class ZealyClient:
         async with aiohttp.ClientSession() as session:
             result = await send_get_request(session, profile_link, GET_header, get_cookies(access_token))
             print(f'{result["discordHandle"]:20}Xp: {result["xp"]:2}   Level: {result["level"]}')
-
-
-def main():
-    loop = asyncio.get_event_loop()
-    # loop.run_until_complete(ZealyClient.get_xp(
-    #     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkNGIxMTZjMS0zZmMxLTRmYTMtYmQ4NS04MzI4OTk5YzM4YzUiLCJhY2NvdW50VHlwZSI6ImRpc2NvcmQiLCJpYXQiOjE2ODEyMzIxMjUsImV4cCI6MTY4MzgyNDEyNX0.vv-7l-uFBM0UrT1fjut7Q8dkSmqgW3EgnvGX0HgonP0'))
-    loop.run_until_complete(ZealyClient.claim_partner_twitter())
-
-
-if __name__ == "__main__":
-    main()
-
