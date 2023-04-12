@@ -8,7 +8,7 @@
 # categories: Special Gift, Invites are skipped.
 quests = {
     "f5161d37-8b9c-4eee-9389-72d62234e4e4": '------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb7c3412f-c534-45dc-baf7-fbaee7fdd085\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK--\r\n', # onboarding: 1 quest (just claim)
-    "61688e80-62a9-4e22-8b43-8e7e95b2df2e": { # special
+    "special": { # special
         "9b5d7b91-c7b9-4b8c-8506-d0623b41f1be": '------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="value"\r\n\r\nWeb3Space_5670204144635964\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="questId"\r\n\r\n9b5d7b91-c7b9-4b8c-8506-d0623b41f1be\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS--\r\n',
         "b73771b6-f642-4410-afba-1b67a164b598": '------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="value"\r\n\r\nSuiGlobal_59d879cc\r\n------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb73771b6-f642-4410-afba-1b67a164b598\r\n------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryNayttNEnSq86BwjE--\r\n',
         "cb6dfe28-0827-4af1-8370-cd8045baf2b7": '------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="value"\r\n\r\nSuiEcosystem_11ed\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="questId"\r\n\r\ncb6dfe28-0827-4af1-8370-cd8045baf2b7\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW--\r\n'
@@ -79,7 +79,7 @@ quests = {
         "4c282823-9c05-4821-9833-192196556b92": '------WebKitFormBoundary3hRAZQXc53lR3k99\r\nContent-Disposition: form-data; name="questId"\r\n\r\n4c282823-9c05-4821-9833-192196556b92\r\n------WebKitFormBoundary3hRAZQXc53lR3k99\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundary3hRAZQXc53lR3k99--\r\n'
 , # claim
      },
-    "18f19041-8751-4f43-940f-85770f61e834": { # partner twitter follow (just claim)
+    "partner_twitter": { # partner twitter follow (just claim)
         "81ac3145-1c92-4006-a142-67e10a66d4df": '------WebKitFormBoundaryWX8ZKpDeILUQTw02\r\nContent-Disposition: form-data; name="questId"\r\n\r\n81ac3145-1c92-4006-a142-67e10a66d4df\r\n------WebKitFormBoundaryWX8ZKpDeILUQTw02\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryWX8ZKpDeILUQTw02--\r\n'
 ,
         "c7baab49-b7f7-4bc0-8da3-b941584ddc41": '------WebKitFormBoundarypY2pbL1rsQbBwOgg\r\nContent-Disposition: form-data; name="questId"\r\n\r\nc7baab49-b7f7-4bc0-8da3-b941584ddc41\r\n------WebKitFormBoundarypY2pbL1rsQbBwOgg\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarypY2pbL1rsQbBwOgg--\r\n'
@@ -103,7 +103,7 @@ quests = {
         "6f77ce4d-22d5-4167-8064-cafad0462904": '------WebKitFormBoundaryOQ2E8oIoT9NYXqAH\r\nContent-Disposition: form-data; name="questId"\r\n\r\n6f77ce4d-22d5-4167-8064-cafad0462904\r\n------WebKitFormBoundaryOQ2E8oIoT9NYXqAH\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryOQ2E8oIoT9NYXqAH--\r\n'
 
     },
-    "d833e1f4-251e-4859-828d-afa5c7abd34d": { # suiswap friend follow
+    "suiswap_friend": { # suiswap friend follow
         "273df3e9-eb21-4c70-9de2-a2d1e52a7552": '------WebKitFormBoundary362DjxmuHxiW3oS7\r\nContent-Disposition: form-data; name="questId"\r\n\r\n273df3e9-eb21-4c70-9de2-a2d1e52a7552\r\n------WebKitFormBoundary362DjxmuHxiW3oS7\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundary362DjxmuHxiW3oS7--\r\n'
 ,
         "ee1e3c93-3cf7-4a87-8af7-8d427d4b87f6": '------WebKitFormBoundarytdmPRBGulUBbKAUS\r\nContent-Disposition: form-data; name="questId"\r\n\r\nee1e3c93-3cf7-4a87-8af7-8d427d4b87f6\r\n------WebKitFormBoundarytdmPRBGulUBbKAUS\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarytdmPRBGulUBbKAUS--\r\n'
