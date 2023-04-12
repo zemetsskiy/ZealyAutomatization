@@ -231,10 +231,16 @@ class ZealyClient:
                     logger.error(f"ERROR: {err_}")
 
     @staticmethod
+    async def claim_all():
+        pass
+
+    @staticmethod
     async def get_xp(access_token):
         async with aiohttp.ClientSession() as session:
             result = await send_get_request(session, profile_link, GET_header, get_cookies(access_token))
             print(f'Xp: {result["xp"]}\nLevel: {result["level"]}')
+
+
 
 
 def main():
