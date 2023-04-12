@@ -17,13 +17,17 @@ class ZealyClient:
     def __init__(self):
         self.base_url = "https://api.zealy.io/communities/suiswap-app/quests"
 
-    def claim_onboarding(self):
-        pass
+    @staticmethod
+    async def claim_onboarding():
+        async with aiohttp.ClientSession() as session:
+            for key, data in quests["onboarding"].items():
+                result = await send_post_request(session, get_quest_url(key), data, get_header(data[2:40]))
+                print(f'Response {key[0:4]}: {result}')
 
     @staticmethod
     async def claim_special():
         async with aiohttp.ClientSession() as session:
-            for key, data in quests["special"].items():
+            for key, data in quests["onboarding"]:
                 result = await send_post_request(session, get_quest_url(key), data, get_header(data[2:40]))
                 print(f'Response {key[0:4]}: {result}')
 
@@ -85,7 +89,7 @@ class ZealyClient:
 
 def main():
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(ZealyClient.claim_twitter())
+    loop.run_until_complete(ZealyClient.claim_onboarding())
 
 
 if __name__ == "__main__":
