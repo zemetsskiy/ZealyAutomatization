@@ -1,10 +1,21 @@
-from config.tokens import access_token
+def get_cookies(access_token):
+    return {
+        'subdomain': 'suiswap-app',
+        'access_token': access_token,
+        'cookie-config': '{%22functional%22:true%2C%22analytics%22:true%2C%22marketing%22:true}',
+    }
 
-cookies = {
-    'subdomain': 'suiswap-app',
-    'access_token': access_token,
-    'cookie-config': '{%22functional%22:true%2C%22analytics%22:true%2C%22marketing%22:true}',
-}
+
+def get_url_proxies(proxy):
+    split_proxy = proxy.split(":")
+    proxy_url = split_proxy[0] + ':' + split_proxy[1] + ':' + split_proxy[2]
+    return proxy_url  # 'socks5://your-proxy-server:port'
+
+
+def get_auth_proxies(proxy):
+    split_proxy = proxy.split(":")
+    proxy_auth = [split_proxy[3],  split_proxy[4]]
+    return proxy_auth
 
 profile_link = "https://api.zealy.io/communities/suiswap-app/users/me"
 
