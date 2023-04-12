@@ -34,8 +34,13 @@ class ZealyClient:
                 result = await send_post_request(session, get_quest_url(key), data, get_header(data[2:40]))
                 print(f'Response {key[0:4]}: {result}')
 
-    def claim_boost(self):
-        pass
+    @staticmethod
+    async def claim_boost():
+        async with aiohttp.ClientSession() as session:
+            for key, data in quests["boost"].items():
+                if data != "":
+                    result = await send_post_request(session, get_quest_url(key), data, get_header(data[2:40]))
+                    print(f'Response {key[0:4]}: {result}')
 
     def claim_join(self):
         pass
@@ -62,7 +67,7 @@ class ZealyClient:
 
 def main():
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(ZealyClient.claim_special())
+    loop.run_until_complete(ZealyClient.claim_boost())
 
 
 if __name__ == "__main__":
