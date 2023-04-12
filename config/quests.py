@@ -7,25 +7,28 @@
 
 # categories: Special Gift, Invites are skipped.
 quests = {
-    "f5161d37-8b9c-4eee-9389-72d62234e4e4": '------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb7c3412f-c534-45dc-baf7-fbaee7fdd085\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK--\r\n', # onboarding: 1 quest (just claim)
+    "onboarding": {
+        "b7c3412f-c534-45dc-baf7-fbaee7fdd085": '------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb7c3412f-c534-45dc-baf7-fbaee7fdd085\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK--\r\n', # onboarding: 1 quest (just claim)
+    },
     "special": { # special
         "9b5d7b91-c7b9-4b8c-8506-d0623b41f1be": '------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="value"\r\n\r\nWeb3Space_5670204144635964\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="questId"\r\n\r\n9b5d7b91-c7b9-4b8c-8506-d0623b41f1be\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS--\r\n',
         "b73771b6-f642-4410-afba-1b67a164b598": '------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="value"\r\n\r\nSuiGlobal_59d879cc\r\n------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb73771b6-f642-4410-afba-1b67a164b598\r\n------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryNayttNEnSq86BwjE--\r\n',
         "cb6dfe28-0827-4af1-8370-cd8045baf2b7": '------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="value"\r\n\r\nSuiEcosystem_11ed\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="questId"\r\n\r\ncb6dfe28-0827-4af1-8370-cd8045baf2b7\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW--\r\n'
     },
-    "2db9007a-eaa3-4ac1-a948-0ad7e40d0669": { # join (just claim)
+    "join": { # join (just claim)
         "834e8702-773a-4ea5-82cd-0b8987ad8cb9": '------WebKitFormBoundaryIsJOK7tJBIcmrAUg\r\nContent-Disposition: form-data; name="questId"\r\n\r\n834e8702-773a-4ea5-82cd-0b8987ad8cb9\r\n------WebKitFormBoundaryIsJOK7tJBIcmrAUg\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryIsJOK7tJBIcmrAUg--\r\n',
         "afddae52-4e18-4a96-97db-8c82385a1ae7": '------WebKitFormBoundaryiDGPDKfKNRhgQPDf\r\nContent-Disposition: form-data; name="questId"\r\n\r\nafddae52-4e18-4a96-97db-8c82385a1ae7\r\n------WebKitFormBoundaryiDGPDKfKNRhgQPDf\r\nContent-Disposition: form-data; name="type"\r\n\r\ndiscord\r\n------WebKitFormBoundaryiDGPDKfKNRhgQPDf--\r\n',
         "14237ce9-121f-4288-9c2a-e596987151cf": "", #visit website
         "08ebac1b-18e4-4807-80c2-b70fa1882cd9": "", # swap on suiswap
-        "5b28150f-4ee6-4e03-9607-68040987628e": '------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="value"\r\n\r\ngood\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="questId"\r\n\r\n5b28150f-4ee6-4e03-9607-68040987628e\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9--\r\n'
+        "5b28150f-4ee6-4e03-9607-68040987628e": '------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="value"\r\n\r\nGreat platform\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="questId"\r\n\r\n5b28150f-4ee6-4e03-9607-68040987628e\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9--\r\n'
         # share your feedback
     },
 
-    "698e2a4a-352a-4642-aa78-21cccee6cdc8": { # boost (just claim)
+    "boost": { # boost (just claim)
         "e3073a79-0ebc-465c-9e2c-7f4eeecebb0b": '------WebKitFormBoundaryeuDFXBIBAk1RSG5r\r\nContent-Disposition: form-data; name="questId"\r\n\r\ne3073a79-0ebc-465c-9e2c-7f4eeecebb0b\r\n------WebKitFormBoundaryeuDFXBIBAk1RSG5r\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryeuDFXBIBAk1RSG5r--\r\n',
         "1d9824e7-b2d9-4235-839d-20f7f7aa282a": '------WebKitFormBoundarysrKx390auLcrDaGR\r\nContent-Disposition: form-data; name="questId"\r\n\r\n1d9824e7-b2d9-4235-839d-20f7f7aa282a\r\n------WebKitFormBoundarysrKx390auLcrDaGR\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundarysrKx390auLcrDaGR--\r\n',
-        "c4fb82be-d091-45b4-b4d8-bb3915563b57": "", # lvl8+
+        "c4fb82be-d091-45b4-b4d8-bb3915563b57": '------WebKitFormBoundaryoAgpVAzqsph9EwOl\r\nContent-Disposition: form-data; name="questId"\r\n\r\nc4fb82be-d091-45b4-b4d8-bb3915563b57\r\n------WebKitFormBoundaryoAgpVAzqsph9EwOl\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryoAgpVAzqsph9EwOl--\r\n'
+, # lvl8+
         "9df2617f-fcb2-4c0b-87bb-c24edeeb7697": "" # lvl8+
     },
     "quiz": { # quiz
@@ -64,10 +67,11 @@ quests = {
         "a13f7af5-86e2-4453-a482-9823bc212f59": '------WebKitFormBoundaryWWfINzeDmnM2z3e7\r\nContent-Disposition: form-data; name="value"\r\n\r\nEthos Wallet\r\n------WebKitFormBoundaryWWfINzeDmnM2z3e7\r\nContent-Disposition: form-data; name="questId"\r\n\r\na13f7af5-86e2-4453-a482-9823bc212f59\r\n------WebKitFormBoundaryWWfINzeDmnM2z3e7\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryWWfINzeDmnM2z3e7--\r\n'
 
     },
-    "cdd789f2-df3b-4498-b75a-ecdfe31731cd": { # twitter
-        "6af63638-6c87-4caf-bade-a08ec1b42896": "", # tweet_link
-        "31876fc2-948e-4c04-8936-2f25a152c20e": "", # tweet_link
-        "dbde2f07-5fd4-47f2-8082-a69557838633": "", # tweet_link
+    "twitter": { # twitter
+        "6af63638-6c87-4caf-bade-a08ec1b42896": '------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="value"\r\n\r\nhttps://twitter.com/wtennys0n/status/1646066419728109569\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="questId"\r\n\r\n6af63638-6c87-4caf-bade-a08ec1b42896\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW--\r\n'
+, # tweet_link
+        "31876fc2-948e-4c04-8936-2f25a152c20e": "", # tweet_link (review required)
+        "dbde2f07-5fd4-47f2-8082-a69557838633": "", # tweet_link (review required)
         "a31cc2c6-8891-4118-b46d-2571ab357c21": '------WebKitFormBoundaryMPofDu7t1LP2wAcx\r\nContent-Disposition: form-data; name="questId"\r\n\r\na31cc2c6-8891-4118-b46d-2571ab357c21\r\n------WebKitFormBoundaryMPofDu7t1LP2wAcx\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryMPofDu7t1LP2wAcx--\r\n'
 , # claim
         "dbd40e8b-dc57-4685-8875-5282c5b458f6": '------WebKitFormBoundaryC6eA6U5BxBcJ9d5s\r\nContent-Disposition: form-data; name="questId"\r\n\r\ndbd40e8b-dc57-4685-8875-5282c5b458f6\r\n------WebKitFormBoundaryC6eA6U5BxBcJ9d5s\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryC6eA6U5BxBcJ9d5s--\r\n'
