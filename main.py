@@ -71,7 +71,9 @@ def main():
                         continue
                     else:
                         function = getattr(client, menu_name_to_class_method[function_name])
-                        function()
+                        loop = asyncio.get_event_loop()
+                        loop.run_until_complete(function())
+
                 else:
                     print('Invalid choice')
 
