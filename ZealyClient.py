@@ -3,8 +3,9 @@ import time
 import aiohttp
 
 from config.quests import quests
-from config.params import get_cookies, get_header, get_quest_url, get_url_proxies, get_auth_proxies
-from config.tokens import access_to_account
+from config.params import get_cookies, get_header, get_quest_url, get_url_proxies, get_auth_proxies, profile_link, \
+    GET_header
+from config.tokens import token_to_proxies
 from config.logger import logger
 
 
@@ -21,7 +22,7 @@ async def send_post_request(session, url, data, headers, cookies, proxy):
         return resp.status
 
 
-async def send_get_request(session, url, headers):
+async def send_get_request(session, url, headers, cookies):
     async with session.get(url, headers=headers, cookies=cookies) as resp:
         response = await resp.json()
         return response
@@ -41,7 +42,7 @@ class ZealyClient:
 
     @staticmethod
     async def claim_special():
-        for acc_token, acc_proxy in access_to_account.items():
+        for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 try:
                     for key, data in quests["special"].items():
@@ -117,15 +118,15 @@ class ZealyClient:
     # TODO Получать XP каждого клиента
 
     @staticmethod
-    async def get_xp():
+    async def get_xp(access_token):
         async with aiohttp.ClientSession() as session:
-            result = await send_get_request(session, profile_link, GET_header)
+            result = await send_get_request(session, profile_link, GET_header, get_cookies(access_token))
             print(f'Xp: {result["xp"]}\nLevel: {result["level"]}')
 
 
 def main():
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(ZealyClient.get_xp())
+    loop.run_until_complete(ZealyClient.get_xp('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkNGIxMTZjMS0zZmMxLTRmYTMtYmQ4NS04MzI4OTk5YzM4YzUiLCJhY2NvdW50VHlwZSI6ImRpc2NvcmQiLCJpYXQiOjE2ODEyMzIxMjUsImV4cCI6MTY4MzgyNDEyNX0.vv-7l-uFBM0UrT1fjut7Q8dkSmqgW3EgnvGX0HgonP0'))
 
 
 if __name__ == "__main__":
