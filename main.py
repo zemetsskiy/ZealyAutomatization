@@ -15,9 +15,9 @@ sub_menu_options = {
     '1': 'Claim all quests',
     '2': 'Claim Onboarding',
     '3': 'Claim Special',
-    '4': 'Claim Special Gift',
+    '4': 'Claim Special Gift - disabled',
     '5': 'Claim Join',
-    '6': 'Claim Invites',
+    '6': 'Claim Invites - disabled',
     '7': 'Claim Boost',
     '8': 'Claim Quiz',
     '9': 'Claim Twitter',
@@ -31,43 +31,40 @@ menu_name_to_class_method = {
     'Claim all quests': "claim_all",
     'Claim Onboarding': "claim_onboarding",
     'Claim Special': "claim_special",
-    'Claim Special Gift': "claim_special_gift", # disabled
+    'Claim Special Gift - disabled': "claim_special_gift", # disabled
     'Claim Join': "claim_join",
-    'Claim Invites': "claim_invites", # disabled
+    'Claim Invites - disabled': "claim_invites", # disabled
     'Claim Boost': "claim_boost",
     'Claim Quiz': "claim_quiz",
     'Claim Twitter': "claim_twitter",
     'Claim Partner Twitter Follow': "claim_partner_twitter",
     'Claim Suiswap Friend Follow': "claim_suiswap_friend",
-    'Show accounts xp': ''
 }
 
 
 def main():
     client = ZealyClient()
     while True:
-        # Print the menu options
         print('Choose what u want to do:')
         for key, value in menu_options.items():
             print(f"{key}. {value}")
 
-        # Prompt the user for their choice
         choice = input('> ')
 
-        # Call the appropriate function or quit
         if choice in menu_options:
             if choice == '1':
-                # Print the menu options
                 print('Choose what u want to do:')
                 for key, value in sub_menu_options.items():
                     print(f"{key}. {value}")
 
-                # Prompt the user for their choice
                 sub_choice = input('> ')
                 if sub_choice in sub_menu_options:
                     function_name = sub_menu_options[sub_choice]
 
                     if function_name == 'quit':
+                        continue
+                    elif function_name == 'Claim Special Gift - disabled' or function_name == 'Claim Invites - disabled':
+                        print("This function is currently not available.\n")
                         continue
                     else:
                         function = getattr(client, menu_name_to_class_method[function_name])

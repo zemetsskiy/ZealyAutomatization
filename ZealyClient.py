@@ -11,12 +11,10 @@ from routes import send_post_request, send_get_request, get_me
 
 
 class ZealyClient:
-    # claim link ex: https://api.zealy.io/communities/suiswap-app/quests/b7c3412f-c534-45dc-baf7-fbaee7fdd085/claim
     def __init__(self):
         self.base_url = "https://api.zealy.io/communities/suiswap-app/quests"
 
-    @staticmethod
-    async def claim_onboarding():
+    async def claim_onboarding(self):
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
@@ -39,8 +37,8 @@ class ZealyClient:
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
 
-    @staticmethod
-    async def claim_special():
+
+    async def claim_special(self):
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
@@ -63,8 +61,8 @@ class ZealyClient:
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
 
-    @staticmethod
-    async def claim_quiz():
+
+    async def claim_quiz(self):
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
@@ -87,8 +85,8 @@ class ZealyClient:
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
 
-    @staticmethod
-    async def claim_boost():
+
+    async def claim_boost(self):
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
@@ -112,8 +110,8 @@ class ZealyClient:
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
 
-    @staticmethod
-    async def claim_join():
+
+    async def claim_join(self):
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
@@ -137,8 +135,8 @@ class ZealyClient:
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
 
-    @staticmethod
-    async def claim_twitter():
+
+    async def claim_twitter(self):
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
@@ -185,8 +183,8 @@ class ZealyClient:
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
 
-    @staticmethod
-    async def claim_partner_twitter():
+
+    async def claim_partner_twitter(self):
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
@@ -211,8 +209,8 @@ class ZealyClient:
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
 
-    @staticmethod
-    async def claim_suiswap_friend():
+
+    async def claim_suiswap_friend(self):
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
@@ -235,23 +233,17 @@ class ZealyClient:
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
 
-    @staticmethod
-    async def claim_all():
-        pass
+
+    async def claim_all(self):
+        methods = [self.claim_suiswap_friend, self.claim_partner_twitter, self.claim_twitter,
+                   self.claim_join, self.claim_boost, self.claim_onboarding, self.claim_special,
+                   self.claim_quiz]
+        for method in methods:
+            await method()
+
 
     @staticmethod
     async def get_xp(access_token):
         async with aiohttp.ClientSession() as session:
             result = await send_get_request(session, profile_link, GET_header, get_cookies(access_token))
             print(f'{result["discordHandle"]:20}Xp: {result["xp"]:2}   Level: {result["level"]}')
-
-
-def main():
-    loop = asyncio.get_event_loop()
-    # loop.run_until_complete(ZealyClient.get_xp(
-    #     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkNGIxMTZjMS0zZmMxLTRmYTMtYmQ4NS04MzI4OTk5YzM4YzUiLCJhY2NvdW50VHlwZSI6ImRpc2NvcmQiLCJpYXQiOjE2ODEyMzIxMjUsImV4cCI6MTY4MzgyNDEyNX0.vv-7l-uFBM0UrT1fjut7Q8dkSmqgW3EgnvGX0HgonP0'))
-    loop.run_until_complete(ZealyClient.claim_partner_twitter())
-
-
-if __name__ == "__main__":
-    main()
