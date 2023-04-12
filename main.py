@@ -1,5 +1,8 @@
+import asyncio
+
 from art import text2art
 from ZealyClient import ZealyClient
+from config.tokens import token_to_proxies
 
 
 menu_options = {
@@ -36,6 +39,7 @@ menu_name_to_class_method = {
     'Claim Twitter': "claim_twitter",
     'Claim Partner Twitter Follow': "claim_partner_twitter",
     'Claim Suiswap Friend Follow': "claim_suiswap_friend",
+    'Show accounts xp': ''
 }
 
 
@@ -64,7 +68,7 @@ def main():
                     function_name = sub_menu_options[sub_choice]
 
                     if function_name == 'quit':
-                        break
+                        continue
                     else:
                         function = getattr(client, menu_name_to_class_method[function_name])
                         function()
@@ -77,10 +81,9 @@ def main():
                 if function_name == 'quit':
                     break
                 else:
-                    function = getattr(client, menu_name_to_class_method[function_name])
-                    function()
-
-
+                    for token, _ in token_to_proxies.items():
+                        loop = asyncio.get_event_loop()
+                        loop.run_until_complete(ZealyClient.get_xp(token))
 
         else:
             print('Invalid choice')
