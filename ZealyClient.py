@@ -20,7 +20,13 @@ async def send_post_request(session, url, data, headers, cookies, proxy):
 
     async with session.post(url, data=data, headers=headers, cookies=cookies, proxy=proxy_url,
                             proxy_auth=proxy_auth) as resp:
-        return resp.status
+        warn = ""
+        data = await resp.json()
+        if "error" in data:
+            warn = data['error']['follow']
+        elif "message" in data:
+            warn = data['message']
+        return resp.status, warn
 
 
 async def send_get_request(session, url, headers, cookies):
@@ -34,14 +40,13 @@ class ZealyClient:
     def __init__(self):
         self.base_url = "https://api.zealy.io/communities/suiswap-app/quests"
 
-
     @staticmethod
     async def claim_onboarding():
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 try:
                     for key, data in quests["onboarding"].items():
-                        resp = await send_post_request(session,
+                        resp, warn = await send_post_request(session,
                                                        get_quest_url(key),
                                                        data,
                                                        get_header(data[2:40]),
@@ -50,7 +55,7 @@ class ZealyClient:
                         if resp == 200:
                             logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
-                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- QUEST ALREADY CLAIMED')
+                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
                         else:
                             logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
                         time.sleep(2)
@@ -63,7 +68,7 @@ class ZealyClient:
             async with aiohttp.ClientSession() as session:
                 try:
                     for key, data in quests["special"].items():
-                        resp = await send_post_request(session,
+                        resp, warn = await send_post_request(session,
                                                        get_quest_url(key),
                                                        data,
                                                        get_header(data[2:40]),
@@ -72,7 +77,7 @@ class ZealyClient:
                         if resp == 200:
                             logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
-                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- QUEST ALREADY CLAIMED')
+                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
                         else:
                             logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
                         time.sleep(2)
@@ -85,7 +90,7 @@ class ZealyClient:
             async with aiohttp.ClientSession() as session:
                 try:
                     for key, data in quests["quiz"].items():
-                        resp = await send_post_request(session,
+                        resp, warn = await send_post_request(session,
                                                        get_quest_url(key),
                                                        data,
                                                        get_header(data[2:40]),
@@ -94,7 +99,7 @@ class ZealyClient:
                         if resp == 200:
                             logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
-                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- QUEST ALREADY CLAIMED')
+                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
                         else:
                             logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
                         time.sleep(2)
@@ -108,7 +113,7 @@ class ZealyClient:
                 try:
                     for key, data in quests["boost"].items():
                         if data != "":
-                            resp = await send_post_request(session,
+                            resp, warn = await send_post_request(session,
                                                            get_quest_url(key),
                                                            data,
                                                            get_header(data[2:40]),
@@ -117,7 +122,7 @@ class ZealyClient:
                             if resp == 200:
                                 logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
                             elif resp == 400:
-                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- QUEST ALREADY CLAIMED')
+                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
                             else:
                                 logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
                             time.sleep(2)
@@ -130,8 +135,8 @@ class ZealyClient:
             async with aiohttp.ClientSession() as session:
                 try:
                     for key, data in quests["join"].items():
-                        if not key in {"14237ce9-121f-4288-9c2a-e596987151cf", "08ebac1b-18e4-4807-80c2-b70fa1882cd9"}:
-                            resp = await send_post_request(session,
+                        if not key in {"08ebac1b-18e4-4807-80c2-b70fa1882cd9"}:
+                            resp, warn = await send_post_request(session,
                                                            get_quest_url(key),
                                                            data,
                                                            get_header(data[2:40]),
@@ -140,7 +145,7 @@ class ZealyClient:
                             if resp == 200:
                                 logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
                             elif resp == 400:
-                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- QUEST ALREADY CLAIMED')
+                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
                             else:
                                 logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
                             time.sleep(2)
@@ -154,7 +159,7 @@ class ZealyClient:
                 try:
                     for key, data in quests["twitter"].items():
                         if data != "":
-                            resp = await send_post_request(session,
+                            resp, warn = await send_post_request(session,
                                                            get_quest_url(key),
                                                            data,
                                                            get_header(data[2:40]),
@@ -163,13 +168,13 @@ class ZealyClient:
                             if resp == 200:
                                 logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
                             elif resp == 400:
-                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- QUEST ALREADY CLAIMED')
+                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
                             else:
                                 logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
                             time.sleep(2)
                         elif key == "6af63638-6c87-4caf-bade-a08ec1b42896":
                             boundary = '------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="value"\r\n\r\n' + f'{tweet_links["spread"]}' + '\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="questId"\r\n\r\n6af63638-6c87-4caf-bade-a08ec1b42896\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW--\r\n'
-                            resp = await send_post_request(session,
+                            resp , warn = await send_post_request(session,
                                                            get_quest_url(key),
                                                            data,
                                                            get_header(boundary[2:40]),
@@ -178,7 +183,7 @@ class ZealyClient:
                             if resp == 200:
                                 logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
                             elif resp == 400:
-                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- QUEST ALREADY CLAIMED')
+                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
                             else:
                                 logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
                             time.sleep(2)
@@ -192,7 +197,7 @@ class ZealyClient:
             async with aiohttp.ClientSession() as session:
                 try:
                     for key, data in quests["partner_twitter"].items():
-                        resp = await send_post_request(session,
+                        resp, warn = await send_post_request(session,
                                                        get_quest_url(key),
                                                        data,
                                                        get_header(data[2:40]),
@@ -201,7 +206,7 @@ class ZealyClient:
                         if resp == 200:
                             logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
-                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- QUEST ALREADY CLAIMED')
+                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
                         else:
                             logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
                         time.sleep(2)
@@ -214,7 +219,7 @@ class ZealyClient:
             async with aiohttp.ClientSession() as session:
                 try:
                     for key, data in quests["suiswap_friend"].items():
-                        resp = await send_post_request(session,
+                        resp, warn = await send_post_request(session,
                                                        get_quest_url(key),
                                                        data,
                                                        get_header(data[2:40]),
@@ -223,7 +228,7 @@ class ZealyClient:
                         if resp == 200:
                             logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
-                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- QUEST ALREADY CLAIMED')
+                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
                         else:
                             logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
                         time.sleep(2)
@@ -239,7 +244,9 @@ class ZealyClient:
 
 def main():
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(ZealyClient.get_xp('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkNGIxMTZjMS0zZmMxLTRmYTMtYmQ4NS04MzI4OTk5YzM4YzUiLCJhY2NvdW50VHlwZSI6ImRpc2NvcmQiLCJpYXQiOjE2ODEyMzIxMjUsImV4cCI6MTY4MzgyNDEyNX0.vv-7l-uFBM0UrT1fjut7Q8dkSmqgW3EgnvGX0HgonP0'))
+    # loop.run_until_complete(ZealyClient.get_xp(
+    #     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkNGIxMTZjMS0zZmMxLTRmYTMtYmQ4NS04MzI4OTk5YzM4YzUiLCJhY2NvdW50VHlwZSI6ImRpc2NvcmQiLCJpYXQiOjE2ODEyMzIxMjUsImV4cCI6MTY4MzgyNDEyNX0.vv-7l-uFBM0UrT1fjut7Q8dkSmqgW3EgnvGX0HgonP0'))
+    loop.run_until_complete(ZealyClient.claim_partner_twitter())
 
 
 if __name__ == "__main__":
