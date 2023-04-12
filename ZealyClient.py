@@ -42,8 +42,13 @@ class ZealyClient:
                     result = await send_post_request(session, get_quest_url(key), data, get_header(data[2:40]))
                     print(f'Response {key[0:4]}: {result}')
 
-    def claim_join(self):
-        pass
+    @staticmethod
+    async def claim_join():
+        async with aiohttp.ClientSession() as session:
+            for key, data in quests["join"].items():
+                if not key in {"14237ce9-121f-4288-9c2a-e596987151cf", "08ebac1b-18e4-4807-80c2-b70fa1882cd9"}:
+                    result = await send_post_request(session, get_quest_url(key), data, get_header(data[2:40]))
+                    print(f'Response {key[0:4]}: {result}')
 
     def claim_twitter(self):
         pass
@@ -67,7 +72,7 @@ class ZealyClient:
 
 def main():
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(ZealyClient.claim_boost())
+    loop.run_until_complete(ZealyClient.claim_join())
 
 
 if __name__ == "__main__":
