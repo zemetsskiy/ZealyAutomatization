@@ -7,7 +7,9 @@
 
 # categories: Special Gift, Invites are skipped.
 quests = {
-    "f5161d37-8b9c-4eee-9389-72d62234e4e4": '------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb7c3412f-c534-45dc-baf7-fbaee7fdd085\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK--\r\n', # onboarding: 1 quest (just claim)
+    "onboarding": {
+        "b7c3412f-c534-45dc-baf7-fbaee7fdd085": '------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb7c3412f-c534-45dc-baf7-fbaee7fdd085\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryLqqBfa1FBbBY8BxK--\r\n', # onboarding: 1 quest (just claim)
+    },
     "special": { # special
         "9b5d7b91-c7b9-4b8c-8506-d0623b41f1be": '------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="value"\r\n\r\nWeb3Space_5670204144635964\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="questId"\r\n\r\n9b5d7b91-c7b9-4b8c-8506-d0623b41f1be\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryFhxBgSmTYcr2u6MS--\r\n',
         "b73771b6-f642-4410-afba-1b67a164b598": '------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="value"\r\n\r\nSuiGlobal_59d879cc\r\n------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb73771b6-f642-4410-afba-1b67a164b598\r\n------WebKitFormBoundaryNayttNEnSq86BwjE\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryNayttNEnSq86BwjE--\r\n',
