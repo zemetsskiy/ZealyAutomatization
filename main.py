@@ -86,7 +86,7 @@ def main():
                     for token, _ in token_to_proxies.items():
                         loop = asyncio.get_event_loop()
                         loop.run_until_complete(ZealyClient.get_xp(token))
-
+                    print('\n')
         else:
             print('Invalid choice')
 
