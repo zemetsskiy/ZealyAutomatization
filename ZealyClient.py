@@ -1,39 +1,24 @@
 import asyncio
 import time
-import logging
 import aiohttp
-
-from aiohttp_socks import ProxyConnector, ProxyType
 
 from config.quests import quests
 from config.params import get_cookies, get_header, get_quest_url, get_url_proxies, get_auth_proxies
 from config.tokens import access_to_account
-
-# Set up logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-console_handler = logging.StreamHandler()
-console_handler.setFormatter(formatter)
-logger.addHandler(console_handler)
+from config.logger import logger
 
 
 async def send_post_request(session, url, data, headers, cookies, proxy):
     proxy_url = get_url_proxies(proxy)
-
     username = get_auth_proxies(proxy)[0]
     password = get_auth_proxies(proxy)[1]
-
-    logger.info(f"Proxy connect: {proxy_url}, Auth: {username}--{password} ")
-
     proxy_auth = aiohttp.BasicAuth(username, password)
-    async with session.post(url, data=data, headers=headers, cookies=cookies, proxy=proxy_url, proxy_auth=proxy_auth) as resp:
-        result = resp.status
 
-        #TODO add try exception
-        data = await resp.json()
-        ip_address = 0
-        return [result, ip_address]
+    logger.info(f"CONNECT TO PROXY: {proxy_url}  AUTH: {username}:{password} ")
+
+    async with session.post(url, data=data, headers=headers, cookies=cookies, proxy=proxy_url,
+                            proxy_auth=proxy_auth) as resp:
+        return resp.status
 
 
 class ZealyClient:
@@ -48,16 +33,23 @@ class ZealyClient:
     async def claim_special():
         for acc_token, acc_proxy in access_to_account.items():
             async with aiohttp.ClientSession() as session:
-                for key, data in quests["special"].items():
-                    result = await send_post_request(session,
-                                                     get_quest_url(key),
-                                                     data,
-                                                     get_header(data[2:40]),
-                                                     get_cookies(acc_token),
-                                                     acc_proxy)
-                    # print(get_quest_url(key))
-                    logger.info(f'Response {key[0:4]}:  STATUS CODE {result[0]}')
-                    time.sleep(2)
+                try:
+                    for key, data in quests["special"].items():
+                        resp = await send_post_request(session,
+                                                       get_quest_url(key),
+                                                       data,
+                                                       get_header(data[2:40]),
+                                                       get_cookies(acc_token),
+                                                       acc_proxy)
+                        if resp == 200:
+                            logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
+                        elif resp == 400:
+                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- QUESTS ALREADY CLAIMED')
+                        else:
+                            logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
+                        time.sleep(2)
+                except aiohttp.ClientError as err_:
+                    logger.error(f"ERROR: {err_}")
 
     # @staticmethod
     # async def claim_quiz():
