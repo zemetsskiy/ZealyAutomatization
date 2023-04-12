@@ -16,8 +16,6 @@ async def send_post_request(session, url, data, headers, cookies, proxy):
     password = get_auth_proxies(proxy)[1]
     proxy_auth = aiohttp.BasicAuth(username, password)
 
-    logger.info(f"CONNECT TO PROXY: {proxy_url}  AUTH: {username}:{password} ")
-
     async with session.post(url, data=data, headers=headers, cookies=cookies, proxy=proxy_url,
                             proxy_auth=proxy_auth) as resp:
         warn = ""
@@ -25,7 +23,7 @@ async def send_post_request(session, url, data, headers, cookies, proxy):
         if "error" in data:
             warn = data['error']['follow']
         elif "message" in data:
-            warn = data['message']
+            warn = data['message'] + " or Already Claimed"
         return resp.status, warn
 
 
@@ -33,6 +31,12 @@ async def send_get_request(session, url, headers, cookies):
     async with session.get(url, headers=headers, cookies=cookies) as resp:
         response = await resp.json()
         return response
+
+
+async def get_me(access_token):
+    async with aiohttp.ClientSession() as session:
+        result = await send_get_request(session, profile_link, GET_header, get_cookies(access_token))
+        return result["discordHandle"]
 
 
 class ZealyClient:
@@ -44,20 +48,22 @@ class ZealyClient:
     async def claim_onboarding():
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
+                user_name = await get_me(acc_token)
                 try:
                     for key, data in quests["onboarding"].items():
                         resp, warn = await send_post_request(session,
-                                                       get_quest_url(key),
-                                                       data,
-                                                       get_header(data[2:40]),
-                                                       get_cookies(acc_token),
-                                                       acc_proxy)
+                                                             get_quest_url(key),
+                                                             data,
+                                                             get_header(data[2:40]),
+                                                             get_cookies(acc_token),
+                                                             acc_proxy)
                         if resp == 200:
-                            logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
+                            logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
-                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
+                            logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                         else:
-                            logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
+                            logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING WENT '
+                                         f'WRONG')
                         time.sleep(2)
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
@@ -66,20 +72,22 @@ class ZealyClient:
     async def claim_special():
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
+                user_name = await get_me(acc_token)
                 try:
                     for key, data in quests["special"].items():
                         resp, warn = await send_post_request(session,
-                                                       get_quest_url(key),
-                                                       data,
-                                                       get_header(data[2:40]),
-                                                       get_cookies(acc_token),
-                                                       acc_proxy)
+                                                             get_quest_url(key),
+                                                             data,
+                                                             get_header(data[2:40]),
+                                                             get_cookies(acc_token),
+                                                             acc_proxy)
                         if resp == 200:
-                            logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
+                            logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
-                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
+                            logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                         else:
-                            logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
+                            logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING WENT '
+                                         f'WRONG')
                         time.sleep(2)
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
@@ -88,20 +96,22 @@ class ZealyClient:
     async def claim_quiz():
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
+                user_name = await get_me(acc_token)
                 try:
                     for key, data in quests["quiz"].items():
                         resp, warn = await send_post_request(session,
-                                                       get_quest_url(key),
-                                                       data,
-                                                       get_header(data[2:40]),
-                                                       get_cookies(acc_token),
-                                                       acc_proxy)
+                                                             get_quest_url(key),
+                                                             data,
+                                                             get_header(data[2:40]),
+                                                             get_cookies(acc_token),
+                                                             acc_proxy)
                         if resp == 200:
-                            logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
+                            logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
-                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
+                            logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                         else:
-                            logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
+                            logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING WENT '
+                                         f'WRONG')
                         time.sleep(2)
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
@@ -110,21 +120,23 @@ class ZealyClient:
     async def claim_boost():
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
+                user_name = await get_me(acc_token)
                 try:
                     for key, data in quests["boost"].items():
                         if data != "":
                             resp, warn = await send_post_request(session,
-                                                           get_quest_url(key),
-                                                           data,
-                                                           get_header(data[2:40]),
-                                                           get_cookies(acc_token),
-                                                           acc_proxy)
+                                                                 get_quest_url(key),
+                                                                 data,
+                                                                 get_header(data[2:40]),
+                                                                 get_cookies(acc_token),
+                                                                 acc_proxy)
                             if resp == 200:
-                                logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
+                                logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                             elif resp == 400:
-                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
+                                logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                             else:
-                                logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
+                                logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING '
+                                             f'WENT WRONG')
                             time.sleep(2)
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
@@ -133,21 +145,23 @@ class ZealyClient:
     async def claim_join():
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
+                user_name = await get_me(acc_token)
                 try:
                     for key, data in quests["join"].items():
                         if not key in {"08ebac1b-18e4-4807-80c2-b70fa1882cd9"}:
                             resp, warn = await send_post_request(session,
-                                                           get_quest_url(key),
-                                                           data,
-                                                           get_header(data[2:40]),
-                                                           get_cookies(acc_token),
-                                                           acc_proxy)
+                                                                 get_quest_url(key),
+                                                                 data,
+                                                                 get_header(data[2:40]),
+                                                                 get_cookies(acc_token),
+                                                                 acc_proxy)
                             if resp == 200:
-                                logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
+                                logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                             elif resp == 400:
-                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
+                                logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                             else:
-                                logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
+                                logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING '
+                                             f'WENT WRONG')
                             time.sleep(2)
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
@@ -156,36 +170,45 @@ class ZealyClient:
     async def claim_twitter():
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
+                user_name = await get_me(acc_token)
                 try:
                     for key, data in quests["twitter"].items():
                         if data != "":
                             resp, warn = await send_post_request(session,
-                                                           get_quest_url(key),
-                                                           data,
-                                                           get_header(data[2:40]),
-                                                           get_cookies(acc_token),
-                                                           acc_proxy)
+                                                                 get_quest_url(key),
+                                                                 data,
+                                                                 get_header(data[2:40]),
+                                                                 get_cookies(acc_token),
+                                                                 acc_proxy)
                             if resp == 200:
-                                logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
+                                logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                             elif resp == 400:
-                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
+                                logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                             else:
-                                logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
+                                logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING '
+                                             f'WENT WRONG')
+
                             time.sleep(2)
                         elif key == "6af63638-6c87-4caf-bade-a08ec1b42896":
-                            boundary = '------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="value"\r\n\r\n' + f'{tweet_links["spread"]}' + '\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="questId"\r\n\r\n6af63638-6c87-4caf-bade-a08ec1b42896\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW--\r\n'
-                            resp , warn = await send_post_request(session,
-                                                           get_quest_url(key),
-                                                           data,
-                                                           get_header(boundary[2:40]),
-                                                           get_cookies(acc_token),
-                                                           acc_proxy)
+                            boundary = '------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; ' \
+                                       'name="value"\r\n\r\n' + f'{tweet_links["spread"]}' + \
+                                       '\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: ' \
+                                       'form-data; ' \
+                                       'name="questId"\r\n\r\n6af63638-6c87-4caf-bade-a08ec1b42896\r\n' \
+                                       '------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; ' \
+                                       'name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW--\r\n '
+                            resp, warn = await send_post_request(session,
+                                                                 get_quest_url(key),
+                                                                 data,
+                                                                 get_header(boundary[2:40]),
+                                                                 get_cookies(acc_token),
+                                                                 acc_proxy)
                             if resp == 200:
-                                logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
+                                logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                             elif resp == 400:
-                                logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
+                                logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                             else:
-                                logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
+                                logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
                             time.sleep(2)
 
                 except aiohttp.ClientError as err_:
@@ -195,21 +218,24 @@ class ZealyClient:
     async def claim_partner_twitter():
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
+                user_name = await get_me(acc_token)
                 try:
 
                     for key, data in quests["partner_twitter"].items():
                         resp, warn = await send_post_request(session,
-                                                       get_quest_url(key),
-                                                       data,
-                                                       get_header(data[2:40]),
-                                                       get_cookies(acc_token),
-                                                       acc_proxy)
+                                                             get_quest_url(key),
+                                                             data,
+                                                             get_header(data[2:40]),
+                                                             get_cookies(acc_token),
+                                                             acc_proxy)
                         if resp == 200:
-                            logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
+                            logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
-                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
+                            logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                         else:
-                            logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
+                            logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING WENT '
+                                         f'WRONG')
+
                         time.sleep(2)
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
@@ -218,20 +244,22 @@ class ZealyClient:
     async def claim_suiswap_friend():
         for acc_token, acc_proxy in token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
+                user_name = await get_me(acc_token)
                 try:
                     for key, data in quests["suiswap_friend"].items():
                         resp, warn = await send_post_request(session,
-                                                       get_quest_url(key),
-                                                       data,
-                                                       get_header(data[2:40]),
-                                                       get_cookies(acc_token),
-                                                       acc_proxy)
+                                                             get_quest_url(key),
+                                                             data,
+                                                             get_header(data[2:40]),
+                                                             get_cookies(acc_token),
+                                                             acc_proxy)
                         if resp == 200:
-                            logger.info(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SUCCESS')
+                            logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
-                            logger.warning(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- {warn}')
+                            logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                         else:
-                            logger.error(f'RESPONSE {key[0:4]}: STATUS CODE {resp} --- SOMETHING WENT WRONG')
+                            logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING WENT '
+                                         f'WRONG')
                         time.sleep(2)
                 except aiohttp.ClientError as err_:
                     logger.error(f"ERROR: {err_}")
@@ -256,4 +284,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
