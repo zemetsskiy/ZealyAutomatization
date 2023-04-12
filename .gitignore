@@ -1,3 +1,4 @@
 .idea/
 config/__pycache__/
 config/tokens.py
+__pycache__/
