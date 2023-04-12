@@ -64,10 +64,11 @@ quests = {
         "a13f7af5-86e2-4453-a482-9823bc212f59": '------WebKitFormBoundaryWWfINzeDmnM2z3e7\r\nContent-Disposition: form-data; name="value"\r\n\r\nEthos Wallet\r\n------WebKitFormBoundaryWWfINzeDmnM2z3e7\r\nContent-Disposition: form-data; name="questId"\r\n\r\na13f7af5-86e2-4453-a482-9823bc212f59\r\n------WebKitFormBoundaryWWfINzeDmnM2z3e7\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryWWfINzeDmnM2z3e7--\r\n'
 
     },
-    "cdd789f2-df3b-4498-b75a-ecdfe31731cd": { # twitter
-        "6af63638-6c87-4caf-bade-a08ec1b42896": "", # tweet_link
-        "31876fc2-948e-4c04-8936-2f25a152c20e": "", # tweet_link
-        "dbde2f07-5fd4-47f2-8082-a69557838633": "", # tweet_link
+    "twitter": { # twitter
+        "6af63638-6c87-4caf-bade-a08ec1b42896": '------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="value"\r\n\r\nhttps://twitter.com/wtennys0n/status/1646066419728109569\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="questId"\r\n\r\n6af63638-6c87-4caf-bade-a08ec1b42896\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryyrn9YrjQm5U5rTnW--\r\n'
+, # tweet_link
+        "31876fc2-948e-4c04-8936-2f25a152c20e": "", # tweet_link (review required)
+        "dbde2f07-5fd4-47f2-8082-a69557838633": "", # tweet_link (review required)
         "a31cc2c6-8891-4118-b46d-2571ab357c21": '------WebKitFormBoundaryMPofDu7t1LP2wAcx\r\nContent-Disposition: form-data; name="questId"\r\n\r\na31cc2c6-8891-4118-b46d-2571ab357c21\r\n------WebKitFormBoundaryMPofDu7t1LP2wAcx\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryMPofDu7t1LP2wAcx--\r\n'
 , # claim
         "dbd40e8b-dc57-4685-8875-5282c5b458f6": '------WebKitFormBoundaryC6eA6U5BxBcJ9d5s\r\nContent-Disposition: form-data; name="questId"\r\n\r\ndbd40e8b-dc57-4685-8875-5282c5b458f6\r\n------WebKitFormBoundaryC6eA6U5BxBcJ9d5s\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryC6eA6U5BxBcJ9d5s--\r\n'
