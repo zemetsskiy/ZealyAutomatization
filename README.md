@@ -53,7 +53,27 @@ Once you are in the project directory, type `python3 main.py` and press Enter.
 
 
 ### 1. Claim
+Here u can see a set of functions: u can claim all quests at once, or use each function separately and claim quests by blocks:
 ![image](https://user-images.githubusercontent.com/68808330/231740347-1301a097-27df-4e67-87f0-de94be0b3467.png)
-Here u can choose if u want to claim all quests or one by one
-> I do not recommend to use Claim all function
-### 2. 
+> 4. Claim Special Gift and 6. Claim Invites are disabled now due to the fact that I havent reached the required levels (4. Claim Special Gift requires 11 lvl) on any of my accounts that are required to complete quests, and I havent invited enough people through my referral link (6. Claim Invites), so I simply cannot collect the necessary data to submit a request
+> I do not recommend to use Claim all function - zealy.io has a limit on the number of requests within a certain time period, so you may lose the ability to claim any quest for 10 minutes.
+
+#### ex
+You can find almsot all info about your claiming success in logs, lets see. So I have chosen `1. Claim` and `11. Claim Suiswap Friend Follow`: 
+Zealy.io sends the same code response in the response request if u have either already claimed the quest or have not met the quest conditions, and you simply cannot claim it. Since these things cannot be distinguished, something from the above mentioned applies to you - you will see STATUS CODE 400.
+![image](https://user-images.githubusercontent.com/68808330/231760623-8d956e72-0c2e-40d6-a988-eddea91e9389.png)
+
+
+On the contrary, if everything is fine and you have met the quest conditions, you will see STATUS CODE 200 in the log
+
+![image](https://user-images.githubusercontent.com/68808330/231762125-4b1e3350-46fa-4169-9c1c-e5fb70f2afb6.png)
+
+> #e307 - first 4 digits of quest id. That will help u to identificate the quest u claimed or got problem with. If u click on the quest at zealy, u can find its id in the address bar. Some problems appeared wen i tried to put quest names to the logs, so i left it like this for now.
+
+### 2. Show acoount xp
+Iterates through all accounts and collects information about their level and amount of XP
+
+![image](https://user-images.githubusercontent.com/68808330/231757008-aa38990a-dd4b-4c45-ab65-7f206ad6029e.png)
+
+
+
