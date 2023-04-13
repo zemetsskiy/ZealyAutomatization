@@ -15,7 +15,10 @@ async def send_post_request(session, url, data, headers, cookies, proxy):
         warn = ""
         data = await resp.json()
         if "error" in data:
-            warn = data['error']['follow']
+            if "follow" in data["error"]:
+                warn = data["error"]["follow"]
+            else:
+                warn = data["error"]
         elif "message" in data:
             warn = data['message'] + " or Already Claimed"
         return resp.status, warn
