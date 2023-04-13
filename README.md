@@ -48,3 +48,12 @@ token2 proxy2
 # Start
 Navigate to the directory where the project is located like u did it before.
 Once you are in the project directory, type `python3 main.py` and press Enter.
+
+![image](https://user-images.githubusercontent.com/68808330/231740100-4b167c26-29e2-4949-a8c1-bfa4afe39dbe.png)
+
+
+### 1. Claim
+![image](https://user-images.githubusercontent.com/68808330/231740347-1301a097-27df-4e67-87f0-de94be0b3467.png)
+Here u can choose if u want to claim all quests or one by one
+> I do not recommend to use Claim all function
+### 2. 
