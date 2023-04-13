@@ -2,8 +2,7 @@ import asyncio
 
 from art import text2art
 from ZealyClient import ZealyClient
-from config.tokens import token_to_proxies
-
+from config.params import parse_tokens
 
 menu_options = {
     '1': 'Claim',
@@ -80,7 +79,8 @@ def main():
                 if function_name == 'quit':
                     break
                 else:
-                    for token, _ in token_to_proxies.items():
+                    token_to_proxies = parse_tokens("./config/tokens.txt")
+                    for token in token_to_proxies.keys():
                         loop = asyncio.get_event_loop()
                         loop.run_until_complete(ZealyClient.get_xp(token))
                     print('\n')
