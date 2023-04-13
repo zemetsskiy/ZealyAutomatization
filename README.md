@@ -63,6 +63,9 @@ You can find almsot all info about your claiming success in logs, lets see. So I
 Zealy.io sends the same code response in the response request if u have either already claimed the quest or have not met the quest conditions, and you simply cannot claim it. Since these things cannot be distinguished, something from the above mentioned applies to you - you will see STATUS CODE 400.
 ![image](https://user-images.githubusercontent.com/68808330/231760623-8d956e72-0c2e-40d6-a988-eddea91e9389.png)
 
+If u see this - try to reconnect twitter account to your profile.
+![image](https://user-images.githubusercontent.com/68808330/231766066-5bfca7c1-9db3-4991-ad9b-da7322f77e99.png)
+
 
 On the contrary, if everything is fine and you have met the quest conditions, you will see STATUS CODE 200 in the log
 
@@ -76,4 +79,6 @@ Iterates through all accounts and collects information about their level and amo
 ![image](https://user-images.githubusercontent.com/68808330/231757008-aa38990a-dd4b-4c45-ab65-7f206ad6029e.png)
 
 
+### Note
+There are some quests in twitter block that requires a link to the twitter post you've written and will be further reviewed by Suiswap mods, so that cannot be automated by any tools for completing twitter follows, likes, and retweets, like Lyra, for example. So, after completing Block `9. Claim Twitter`, you will have a few uncompleted quizzes left, keep that in mind.
 
