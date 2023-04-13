@@ -13,5 +13,47 @@ Navigate to the directory where the project is located. For example, if the proj
 Once you are in the project directory, type `pip install -r requirements.txt` and press Enter. This will install all the required packages for the program. 
 After installing the required packages, you can launch the program by following these steps:
 
+## Preparing config
+### Preparing zealy tokens
+Go to zealy.io and log in. Open dev tools: ctrl + shift + i. Go to console and paste this code: 
+```
+const cookies = document.cookie.split(';');
+let accessToken = '';
+
+cookies.forEach(cookie => {
+  const cookieArray = cookie.split('=');
+  const cookieName = cookieArray[0].trim();
+  const cookieValue = cookieArray[1].trim();
+  if (cookieName === 'access_token') {
+    accessToken = cookieValue;
+  }
+});
+
+console.log(accessToken);
+```
+
+
+### Next step
+Move into project directory and find tokens.txt file.
+Paste your tokens and proxies in the followind format: 
+```
+token1 proxy1
+token2 proxy2
+...
+```
+
+> u should paste your proxies in the following format: ip:port:username:password
+
+
+# Start
 Navigate to the directory where the project is located like u did it before.
 Once you are in the project directory, type `python3 main.py` and press Enter.
+
+![image](https://user-images.githubusercontent.com/68808330/231740100-4b167c26-29e2-4949-a8c1-bfa4afe39dbe.png)
+
+
+### 1. Claim
+![image](https://user-images.githubusercontent.com/68808330/231740347-1301a097-27df-4e67-87f0-de94be0b3467.png)
+Here u can choose if u want to claim all quests or one by one
+> I do not recommend to use Claim all function
+### 2. 
