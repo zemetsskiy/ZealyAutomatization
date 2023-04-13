@@ -30,6 +30,8 @@ class ZealyClient:
                             logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                         elif resp == 400:
                             logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
+                        elif resp == 422:
+                            logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                         else:
                             logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING WENT '
                                          f'WRONG')
@@ -127,6 +129,8 @@ class ZealyClient:
                             if resp == 200:
                                 logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
                             elif resp == 400:
+                                logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
+                            elif resp == 402:
                                 logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
                             else:
                                 logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING '
