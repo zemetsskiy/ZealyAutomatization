@@ -56,6 +56,7 @@ Once you are in the project directory, type `python3 main.py` and press Enter.
 Here u can see a set of functions: u can claim all quests at once, or use each function separately and claim quests by blocks:
 ![image](https://user-images.githubusercontent.com/68808330/231740347-1301a097-27df-4e67-87f0-de94be0b3467.png)
 > 4. Claim Special Gift and 6. Claim Invites are disabled now due to the fact that I havent reached the required levels (4. Claim Special Gift requires 11 lvl) on any of my accounts that are required to complete quests, and I havent invited enough people through my referral link (6. Claim Invites), so I simply cannot collect the necessary data to submit a request
+
 > I do not recommend to use Claim all function - zealy.io has a limit on the number of requests within a certain time period, so you may lose the ability to claim any quest for 10 minutes.
 
 #### ex
