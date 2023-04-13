@@ -3,8 +3,7 @@ import time
 import aiohttp
 
 from config.quests import quests
-from config.params import get_cookies, get_header, get_quest_url,  profile_link, GET_header
-from config.tokens import token_to_proxies
+from config.params import get_cookies, get_header, get_quest_url,  profile_link, GET_header, parse_tokens
 from config.logger import logger
 from config.tweet_links import tweet_links
 from routes import send_post_request, send_get_request, get_me
@@ -13,9 +12,10 @@ from routes import send_post_request, send_get_request, get_me
 class ZealyClient:
     def __init__(self):
         self.base_url = "https://api.zealy.io/communities/suiswap-app/quests"
+        self.token_to_proxies = parse_tokens("./config/tokens.txt")
 
     async def claim_onboarding(self):
-        for acc_token, acc_proxy in token_to_proxies.items():
+        for acc_token, acc_proxy in self.token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
                 try:
@@ -39,7 +39,7 @@ class ZealyClient:
 
 
     async def claim_special(self):
-        for acc_token, acc_proxy in token_to_proxies.items():
+        for acc_token, acc_proxy in self.token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
                 try:
@@ -63,7 +63,7 @@ class ZealyClient:
 
 
     async def claim_quiz(self):
-        for acc_token, acc_proxy in token_to_proxies.items():
+        for acc_token, acc_proxy in self.token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
                 try:
@@ -87,7 +87,7 @@ class ZealyClient:
 
 
     async def claim_boost(self):
-        for acc_token, acc_proxy in token_to_proxies.items():
+        for acc_token, acc_proxy in self.token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
                 try:
@@ -112,7 +112,7 @@ class ZealyClient:
 
 
     async def claim_join(self):
-        for acc_token, acc_proxy in token_to_proxies.items():
+        for acc_token, acc_proxy in self.token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
                 try:
@@ -137,7 +137,7 @@ class ZealyClient:
 
 
     async def claim_twitter(self):
-        for acc_token, acc_proxy in token_to_proxies.items():
+        for acc_token, acc_proxy in self.token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
                 try:
@@ -185,7 +185,7 @@ class ZealyClient:
 
 
     async def claim_partner_twitter(self):
-        for acc_token, acc_proxy in token_to_proxies.items():
+        for acc_token, acc_proxy in self.token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
                 try:
@@ -211,7 +211,7 @@ class ZealyClient:
 
 
     async def claim_suiswap_friend(self):
-        for acc_token, acc_proxy in token_to_proxies.items():
+        for acc_token, acc_proxy in self.token_to_proxies.items():
             async with aiohttp.ClientSession() as session:
                 user_name = await get_me(acc_token)
                 try:

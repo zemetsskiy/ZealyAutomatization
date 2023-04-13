@@ -8,14 +8,23 @@ def get_cookies(access_token):
 
 def get_url_proxies(proxy):
     split_proxy = proxy.split(":")
-    proxy_url = split_proxy[0] + ':' + split_proxy[1] + ':' + split_proxy[2]
-    return proxy_url  # 'socks5://your-proxy-server:port'
+    proxy_url = split_proxy[0] + ':' + split_proxy[1]
+    return f"http://{proxy_url}"  # 'socks5://your-proxy-server:port'
 
 
 def get_auth_proxies(proxy):
     split_proxy = proxy.split(":")
-    proxy_auth = [split_proxy[3],  split_proxy[4]]
+    proxy_auth = [split_proxy[2],  split_proxy[3]]
     return proxy_auth
+
+
+def parse_tokens(file_path):
+    token_to_proxies = {}
+    with open(file_path, 'r') as f:
+        for line in f:
+            token, proxy = line.strip().split()
+            token_to_proxies[token] = proxy
+    return token_to_proxies
 
 profile_link = "https://api.zealy.io/communities/suiswap-app/users/me"
 
@@ -57,3 +66,11 @@ def get_header(boundary):
 
 def get_quest_url(quest_id):
     return f'https://api.zealy.io/communities/suiswap-app/quests/{quest_id}/claim'
+
+
+def main():
+    parse_tokens("tokens.txt")
+
+
+if __name__ == "__main__":
+    main()
