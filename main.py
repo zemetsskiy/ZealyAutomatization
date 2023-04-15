@@ -22,7 +22,6 @@ sub_menu_options = {
     '9': 'Claim Twitter',
     '10': 'Claim Partner Twitter Follow',
     '11': 'Claim Suiswap Friend Follow',
-    '12': 'Claim Twitter',
     'q': 'quit',
 }
 
