@@ -251,3 +251,13 @@ class ZealyClient:
         async with aiohttp.ClientSession() as session:
             result = await send_get_request(session, profile_link, GET_header, get_cookies(access_token))
             print(f'{result["discordHandle"]:20}Xp: {result["xp"]:2}   Level: {result["level"]}')
+
+
+    @staticmethod
+    async def get_all_xp(token_to_proxies):
+        xp = 0
+        for access_token, _ in token_to_proxies.items():
+            async with aiohttp.ClientSession() as session:
+                result = await send_get_request(session, profile_link, GET_header, get_cookies(access_token))
+                xp += result["xp"]
+        print(f"XP: {xp}")
