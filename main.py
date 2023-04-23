@@ -23,6 +23,7 @@ sub_menu_options = {
     '9': 'Claim Twitter',
     '10': 'Claim Partner Twitter Follow',
     '11': 'Claim Suiswap Friend Follow',
+    '12': 'Claim new twitter quests',
     'q': 'quit',
 }
 
@@ -38,6 +39,7 @@ menu_name_to_class_method = {
     'Claim Twitter': "claim_twitter",
     'Claim Partner Twitter Follow': "claim_partner_twitter",
     'Claim Suiswap Friend Follow': "claim_suiswap_friend",
+    'Claim new twitter quests': "claim_new_twitter"
 }
 
 
