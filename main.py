@@ -7,6 +7,7 @@ from config.params import parse_tokens
 menu_options = {
     '1': 'Claim',
     '2': 'Show account xp',
+    '3': 'Get all xp',
     'q': 'quit',
 }
 
@@ -72,7 +73,7 @@ def main():
                 else:
                     print('Invalid choice')
 
-            else:
+            elif choice == '2':
                 function_name = menu_options[choice]
 
                 if function_name == 'quit':
@@ -83,6 +84,18 @@ def main():
                         loop = asyncio.get_event_loop()
                         loop.run_until_complete(ZealyClient.get_xp(token))
                     print('\n')
+
+            else:
+                function_name = menu_options[choice]
+
+                if function_name == 'quit':
+                    break
+                else:
+                    token_to_proxies = parse_tokens("./config/tokens.txt")
+                    loop = asyncio.get_event_loop()
+                    loop.run_until_complete(ZealyClient.get_all_xp(token_to_proxies))
+                    print('\n')
+
         else:
             print('Invalid choice')
 
