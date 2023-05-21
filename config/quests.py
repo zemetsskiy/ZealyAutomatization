@@ -29,7 +29,8 @@ quests = {
         "1d9824e7-b2d9-4235-839d-20f7f7aa282a": '------WebKitFormBoundarysrKx390auLcrDaGR\r\nContent-Disposition: form-data; name="questId"\r\n\r\n1d9824e7-b2d9-4235-839d-20f7f7aa282a\r\n------WebKitFormBoundarysrKx390auLcrDaGR\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundarysrKx390auLcrDaGR--\r\n',
         "c4fb82be-d091-45b4-b4d8-bb3915563b57": '------WebKitFormBoundaryoAgpVAzqsph9EwOl\r\nContent-Disposition: form-data; name="questId"\r\n\r\nc4fb82be-d091-45b4-b4d8-bb3915563b57\r\n------WebKitFormBoundaryoAgpVAzqsph9EwOl\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryoAgpVAzqsph9EwOl--\r\n'
 , # lvl8+
-        "9df2617f-fcb2-4c0b-87bb-c24edeeb7697": "" # lvl8+
+        "9df2617f-fcb2-4c0b-87bb-c24edeeb7697": '------WebKitFormBoundaryHSgRdL7uV4bpwKBk\r\nContent-Disposition: form-data; name="questId"\r\n\r\n9df2617f-fcb2-4c0b-87bb-c24edeeb7697\r\n------WebKitFormBoundaryHSgRdL7uV4bpwKBk\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryHSgRdL7uV4bpwKBk--\r\n'
+ # lvl8+
     },
     "quiz": { # quiz
         "192a1798-70a9-4939-9da2-73ed0374451d": '------WebKitFormBoundaryfPe3Z4ry7G4BpoIo\r\nContent-Disposition: form-data; name="value"\r\n\r\nA unified swapping platform built on SUI\r\n------WebKitFormBoundaryfPe3Z4ry7G4BpoIo\r\nContent-Disposition: form-data; name="questId"\r\n\r\n192a1798-70a9-4939-9da2-73ed0374451d\r\n------WebKitFormBoundaryfPe3Z4ry7G4BpoIo\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryfPe3Z4ry7G4BpoIo--\r\n',
@@ -139,6 +140,89 @@ quests = {
 ,
         "f3f83518-f040-463c-a1a8-8c0970aa061d": '------WebKitFormBoundaryT69l2ef0rDij3DYV\r\nContent-Disposition: form-data; name="questId"\r\n\r\nf3f83518-f040-463c-a1a8-8c0970aa061d\r\n------WebKitFormBoundaryT69l2ef0rDij3DYV\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryT69l2ef0rDij3DYV--\r\n'
 ,
+"4cbb7782-ba41-4fb7-a21e-2a8a725df86c": '------WebKitFormBoundarycfJT0N4uGfqUf7fM\r\nContent-Disposition: form-data; name="questId"\r\n\r\n4cbb7782-ba41-4fb7-a21e-2a8a725df86c\r\n------WebKitFormBoundarycfJT0N4uGfqUf7fM\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundarycfJT0N4uGfqUf7fM--\r\n',
+"48bd1843-b22e-4290-9509-e4a03315deaa": '------WebKitFormBoundaryTOvPAOi7M7Z8BT0i\r\nContent-Disposition: form-data; name="questId"\r\n\r\n48bd1843-b22e-4290-9509-e4a03315deaa\r\n------WebKitFormBoundaryTOvPAOi7M7Z8BT0i\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryTOvPAOi7M7Z8BT0i--\r\n'
+,
+"cc572d11-b8e4-44be-8a38-e125e886ae89": '------WebKitFormBoundaryBCSa1qpsnup1cAG6\r\nContent-Disposition: form-data; name="questId"\r\n\r\ncc572d11-b8e4-44be-8a38-e125e886ae89\r\n------WebKitFormBoundaryBCSa1qpsnup1cAG6\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryBCSa1qpsnup1cAG6--\r\n'
+,
+"d726a428-6d79-44a1-8308-3f37ca4c39b0": '------WebKitFormBoundaryloyqB1mMkOvp37NN\r\nContent-Disposition: form-data; name="questId"\r\n\r\nd726a428-6d79-44a1-8308-3f37ca4c39b0\r\n------WebKitFormBoundaryloyqB1mMkOvp37NN\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryloyqB1mMkOvp37NN--\r\n'
+,
+"07c5b56d-8601-446f-b342-07dd679b6892": '------WebKitFormBoundaryONGnTfAm6VFXATlH\r\nContent-Disposition: form-data; name="questId"\r\n\r\n07c5b56d-8601-446f-b342-07dd679b6892\r\n------WebKitFormBoundaryONGnTfAm6VFXATlH\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryONGnTfAm6VFXATlH--\r\n'
+,
+"86734885-f891-43d9-ba9a-5ba3b9e9dc0a": '------WebKitFormBoundaryILHonqBAaSwiQ2Rk\r\nContent-Disposition: form-data; name="questId"\r\n\r\n86734885-f891-43d9-ba9a-5ba3b9e9dc0a\r\n------WebKitFormBoundaryILHonqBAaSwiQ2Rk\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryILHonqBAaSwiQ2Rk--\r\n'
+,
+"6dcd1736-0f5e-40dc-bd9e-5e79ad383c3c": '------WebKitFormBoundaryk3EgCoruc3q26wBo\r\nContent-Disposition: form-data; name="questId"\r\n\r\n6dcd1736-0f5e-40dc-bd9e-5e79ad383c3c\r\n------WebKitFormBoundaryk3EgCoruc3q26wBo\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryk3EgCoruc3q26wBo--\r\n'
+,
+"4380040c-1c9f-4421-80f5-e26d72b6c19b": '------WebKitFormBoundaryo2YzBCAu9uaG2pgR\r\nContent-Disposition: form-data; name="questId"\r\n\r\n4380040c-1c9f-4421-80f5-e26d72b6c19b\r\n------WebKitFormBoundaryo2YzBCAu9uaG2pgR\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryo2YzBCAu9uaG2pgR--\r\n'
+,
+"0b7d648c-a626-4112-a778-e1a763b2cd79": '------WebKitFormBoundaryIqeW41uWSnmcVXCU\r\nContent-Disposition: form-data; name="questId"\r\n\r\n0b7d648c-a626-4112-a778-e1a763b2cd79\r\n------WebKitFormBoundaryIqeW41uWSnmcVXCU\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryIqeW41uWSnmcVXCU--\r\n'
+,
+
+
+
+
+
+
+    },
+    "new_quiz": {
+        "4acf38d5-b00f-4585-b314-9b032535e250": '------WebKitFormBoundaryhzK2SXGGhjykAmfN\r\nContent-Disposition: form-data; name="value"\r\n\r\nBy linking your address and enter the special secrect in our airdrop website\r\n------WebKitFormBoundaryhzK2SXGGhjykAmfN\r\nContent-Disposition: form-data; name="questId"\r\n\r\n4acf38d5-b00f-4585-b314-9b032535e250\r\n------WebKitFormBoundaryhzK2SXGGhjykAmfN\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryhzK2SXGGhjykAmfN--\r\n'
+,
+"ac58db75-1a47-48dc-95ff-ba0794e6dc2d": '------WebKitFormBoundary7CHLenzYAXYd4ihS\r\nContent-Disposition: form-data; name="value"\r\n\r\nAll of the above\r\n------WebKitFormBoundary7CHLenzYAXYd4ihS\r\nContent-Disposition: form-data; name="questId"\r\n\r\nac58db75-1a47-48dc-95ff-ba0794e6dc2d\r\n------WebKitFormBoundary7CHLenzYAXYd4ihS\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundary7CHLenzYAXYd4ihS--\r\n'
+,
+        "cf8c3b24-eef4-4049-a640-5a8784be0e4f": '------WebKitFormBoundaryBrtu9pnoj0Aubd99\r\nContent-Disposition: form-data; name="value"\r\n\r\n60%\r\n------WebKitFormBoundaryBrtu9pnoj0Aubd99\r\nContent-Disposition: form-data; name="questId"\r\n\r\ncf8c3b24-eef4-4049-a640-5a8784be0e4f\r\n------WebKitFormBoundaryBrtu9pnoj0Aubd99\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryBrtu9pnoj0Aubd99--\r\n'
+,
+"10e08213-7c75-418c-a7d5-17db2fa57be1": '------WebKitFormBoundaryx1jUrnM5lof0EmNB\r\nContent-Disposition: form-data; name="value"\r\n\r\n10 billion\r\n------WebKitFormBoundaryx1jUrnM5lof0EmNB\r\nContent-Disposition: form-data; name="questId"\r\n\r\n10e08213-7c75-418c-a7d5-17db2fa57be1\r\n------WebKitFormBoundaryx1jUrnM5lof0EmNB\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryx1jUrnM5lof0EmNB--\r\n'
+,
+"b4fa635a-1e4d-4585-95c0-8db709d273c4": '------WebKitFormBoundaryoeYkZ0VjWhAyK0so\r\nContent-Disposition: form-data; name="value"\r\n\r\nAll of the above\r\n------WebKitFormBoundaryoeYkZ0VjWhAyK0so\r\nContent-Disposition: form-data; name="questId"\r\n\r\nb4fa635a-1e4d-4585-95c0-8db709d273c4\r\n------WebKitFormBoundaryoeYkZ0VjWhAyK0so\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryoeYkZ0VjWhAyK0so--\r\n'
+,
+"8170c49a-e003-4d42-b30b-68a231beb742": '------WebKitFormBoundary5rIFdEAvXGvsPf7D\r\nContent-Disposition: form-data; name="value"\r\n\r\nTo decrease the token supply over time and stabilize the token price\r\n------WebKitFormBoundary5rIFdEAvXGvsPf7D\r\nContent-Disposition: form-data; name="questId"\r\n\r\n8170c49a-e003-4d42-b30b-68a231beb742\r\n------WebKitFormBoundary5rIFdEAvXGvsPf7D\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundary5rIFdEAvXGvsPf7D--\r\n'
+,
+"81cee786-5579-4a38-a2e8-e79e229d5600": '------WebKitFormBoundaryuaSAtUM0GvmdfRZw\r\nContent-Disposition: form-data; name="value"\r\n\r\nEvery 14 days\r\n------WebKitFormBoundaryuaSAtUM0GvmdfRZw\r\nContent-Disposition: form-data; name="questId"\r\n\r\n81cee786-5579-4a38-a2e8-e79e229d5600\r\n------WebKitFormBoundaryuaSAtUM0GvmdfRZw\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryuaSAtUM0GvmdfRZw--\r\n'
+,
+"f01c9687-bff0-409c-8631-984094501aec": '------WebKitFormBoundaryDgbPWdAFtw3CBcFF\r\nContent-Disposition: form-data; name="value"\r\n\r\nBy staking SSWP tokens\r\n------WebKitFormBoundaryDgbPWdAFtw3CBcFF\r\nContent-Disposition: form-data; name="questId"\r\n\r\nf01c9687-bff0-409c-8631-984094501aec\r\n------WebKitFormBoundaryDgbPWdAFtw3CBcFF\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryDgbPWdAFtw3CBcFF--\r\n'
+,
+"ada0b372-abd7-4135-9838-fbaf607e77d9": '------WebKitFormBoundaryemMgoTXr39BAf90F\r\nContent-Disposition: form-data; name="value"\r\n\r\nTo receive SSWP tokens\r\n------WebKitFormBoundaryemMgoTXr39BAf90F\r\nContent-Disposition: form-data; name="questId"\r\n\r\nada0b372-abd7-4135-9838-fbaf607e77d9\r\n------WebKitFormBoundaryemMgoTXr39BAf90F\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryemMgoTXr39BAf90F--\r\n'
+,
+"fafc9127-d735-403e-9da5-897f5b71ac85": '------WebKitFormBoundarySjlxj8vt6ETbqetZ\r\nContent-Disposition: form-data; name="value"\r\n\r\nAcquiring additional SSWP rewards upon unlocking\r\n------WebKitFormBoundarySjlxj8vt6ETbqetZ\r\nContent-Disposition: form-data; name="questId"\r\n\r\nfafc9127-d735-403e-9da5-897f5b71ac85\r\n------WebKitFormBoundarySjlxj8vt6ETbqetZ\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundarySjlxj8vt6ETbqetZ--\r\n'
+,
+"a37edf21-1deb-4a38-9e16-47f0ac1f77be": '------WebKitFormBoundaryhjmBhKGqq890A8CB\r\nContent-Disposition: form-data; name="value"\r\n\r\n14 Days\r\n------WebKitFormBoundaryhjmBhKGqq890A8CB\r\nContent-Disposition: form-data; name="questId"\r\n\r\na37edf21-1deb-4a38-9e16-47f0ac1f77be\r\n------WebKitFormBoundaryhjmBhKGqq890A8CB\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryhjmBhKGqq890A8CB--\r\n'
+,
+"1db04577-8ec8-4420-b668-80837d83be00": '------WebKitFormBoundaryt4gCoYnHggzotNYg\r\nContent-Disposition: form-data; name="value"\r\n\r\n60%\r\n------WebKitFormBoundaryt4gCoYnHggzotNYg\r\nContent-Disposition: form-data; name="questId"\r\n\r\n1db04577-8ec8-4420-b668-80837d83be00\r\n------WebKitFormBoundaryt4gCoYnHggzotNYg\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryt4gCoYnHggzotNYg--\r\n'
+,
+"fb6491f2-d9cf-49cc-84e8-d09c60ec3fc5": '------WebKitFormBoundarykJWbVTkAbME2ZRFb\r\nContent-Disposition: form-data; name="value"\r\n\r\nEvery two weeks\r\n------WebKitFormBoundarykJWbVTkAbME2ZRFb\r\nContent-Disposition: form-data; name="questId"\r\n\r\nfb6491f2-d9cf-49cc-84e8-d09c60ec3fc5\r\n------WebKitFormBoundarykJWbVTkAbME2ZRFb\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundarykJWbVTkAbME2ZRFb--\r\n'
+,
+"82a70a26-1d40-414a-9257-6899d8700ba5": '------WebKitFormBoundarye45zTKkmUWWALAkq\r\nContent-Disposition: form-data; name="value"\r\n\r\nBoth A and B\r\n------WebKitFormBoundarye45zTKkmUWWALAkq\r\nContent-Disposition: form-data; name="questId"\r\n\r\n82a70a26-1d40-414a-9257-6899d8700ba5\r\n------WebKitFormBoundarye45zTKkmUWWALAkq\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundarye45zTKkmUWWALAkq--\r\n'
+,
+"80c3f85b-93e8-4260-86a1-1cf19e70d555": '------WebKitFormBoundaryPFeLd9NA1W9HdsEl\r\nContent-Disposition: form-data; name="value"\r\n\r\nBoth A and B\r\n------WebKitFormBoundaryPFeLd9NA1W9HdsEl\r\nContent-Disposition: form-data; name="questId"\r\n\r\n80c3f85b-93e8-4260-86a1-1cf19e70d555\r\n------WebKitFormBoundaryPFeLd9NA1W9HdsEl\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryPFeLd9NA1W9HdsEl--\r\n'
+,
+"03fd282c-7eef-4a6d-aed4-6131ee80b2f0": '------WebKitFormBoundaryEoniBBaVKBAlIggn\r\nContent-Disposition: form-data; name="value"\r\n\r\nLonger staking periods result in higher Boost values and increased APR\r\n------WebKitFormBoundaryEoniBBaVKBAlIggn\r\nContent-Disposition: form-data; name="questId"\r\n\r\n03fd282c-7eef-4a6d-aed4-6131ee80b2f0\r\n------WebKitFormBoundaryEoniBBaVKBAlIggn\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryEoniBBaVKBAlIggn--\r\n'
+,
+"6fbfd3cf-85e3-4a9a-916a-ae85b5ae08c6": '------WebKitFormBoundaryhiIPpDHrIAYc1g5d\r\nContent-Disposition: form-data; name="value"\r\n\r\n1.0 to 7.0\r\n------WebKitFormBoundaryhiIPpDHrIAYc1g5d\r\nContent-Disposition: form-data; name="questId"\r\n\r\n6fbfd3cf-85e3-4a9a-916a-ae85b5ae08c6\r\n------WebKitFormBoundaryhiIPpDHrIAYc1g5d\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryhiIPpDHrIAYc1g5d--\r\n'
+,
+"8f246447-290c-4b27-bc85-563554a80d2b": '------WebKitFormBoundaryeieXwdgzt9JJVFbB\r\nContent-Disposition: form-data; name="value"\r\n\r\nBoth A and B\r\n------WebKitFormBoundaryeieXwdgzt9JJVFbB\r\nContent-Disposition: form-data; name="questId"\r\n\r\n8f246447-290c-4b27-bc85-563554a80d2b\r\n------WebKitFormBoundaryeieXwdgzt9JJVFbB\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryeieXwdgzt9JJVFbB--\r\n'
+,
+"3c134740-e03f-44f4-8da9-edfb068c4c6c": '------WebKitFormBoundarybAMkYGnBJjr0ySEJ\r\nContent-Disposition: form-data; name="value"\r\n\r\nBoth A and B\r\n------WebKitFormBoundarybAMkYGnBJjr0ySEJ\r\nContent-Disposition: form-data; name="questId"\r\n\r\n3c134740-e03f-44f4-8da9-edfb068c4c6c\r\n------WebKitFormBoundarybAMkYGnBJjr0ySEJ\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundarybAMkYGnBJjr0ySEJ--\r\n'
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
