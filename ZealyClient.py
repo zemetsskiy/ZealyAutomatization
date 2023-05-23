@@ -237,6 +237,30 @@ class ZealyClient:
                     logger.error(f"ERROR: {err_}")
 
 
+    async def claim_special_gift(self):
+        for acc_token, acc_proxy in self.token_to_proxies.items():
+            async with aiohttp.ClientSession() as session:
+                user_name = await get_me(acc_token)
+                try:
+                    for key, data in quests["special_gift"].items():
+                        resp, warn = await send_post_request(session,
+                                                             get_quest_url(key),
+                                                             data,
+                                                             get_header(data[2:40]),
+                                                             get_cookies(acc_token),
+                                                             acc_proxy)
+                        if resp == 200:
+                            logger.info(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SUCCESS')
+                        elif resp == 400:
+                            logger.warning(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- {warn}')
+                        else:
+                            logger.error(f'#{key[0:4]} RESPONSE by {user_name}: STATUS CODE {resp} --- SOMETHING WENT '
+                                         f'WRONG')
+                        time.sleep(2)
+                except aiohttp.ClientError as err_:
+                    logger.error(f"ERROR: {err_}")
+
+
     async def claim_all(self):
         methods = [self.claim_suiswap_friend, self.claim_partner_twitter, self.claim_twitter,
                    self.claim_join, self.claim_boost, self.claim_onboarding, self.claim_special,
