@@ -16,10 +16,10 @@ quests = {
         "cb6dfe28-0827-4af1-8370-cd8045baf2b7": '------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="value"\r\n\r\nSuiEcosystem_11ed\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="questId"\r\n\r\ncb6dfe28-0827-4af1-8370-cd8045baf2b7\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryKOQr15fZ3w0SZkiW--\r\n'
     },
     "join": { # join (just claim)
-        "834e8702-773a-4ea5-82cd-0b8987ad8cb9": '------WebKitFormBoundaryIsJOK7tJBIcmrAUg\r\nContent-Disposition: form-data; name="questId"\r\n\r\n834e8702-773a-4ea5-82cd-0b8987ad8cb9\r\n------WebKitFormBoundaryIsJOK7tJBIcmrAUg\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryIsJOK7tJBIcmrAUg--\r\n',
-        "afddae52-4e18-4a96-97db-8c82385a1ae7": '------WebKitFormBoundaryiDGPDKfKNRhgQPDf\r\nContent-Disposition: form-data; name="questId"\r\n\r\nafddae52-4e18-4a96-97db-8c82385a1ae7\r\n------WebKitFormBoundaryiDGPDKfKNRhgQPDf\r\nContent-Disposition: form-data; name="type"\r\n\r\ndiscord\r\n------WebKitFormBoundaryiDGPDKfKNRhgQPDf--\r\n',
-        "14237ce9-121f-4288-9c2a-e596987151cf": '------WebKitFormBoundaryM7M8WsZjnX4XBebX\r\nContent-Disposition: form-data; name="value"\r\n\r\nclicked\r\n------WebKitFormBoundaryM7M8WsZjnX4XBebX\r\nContent-Disposition: form-data; name="questId"\r\n\r\n14237ce9-121f-4288-9c2a-e596987151cf\r\n------WebKitFormBoundaryM7M8WsZjnX4XBebX\r\nContent-Disposition: form-data; name="type"\r\n\r\nlink\r\n------WebKitFormBoundaryM7M8WsZjnX4XBebX--\r\n', #visit website
-        "08ebac1b-18e4-4807-80c2-b70fa1882cd9": "", # swap on suiswap
+        #"834e8702-773a-4ea5-82cd-0b8987ad8cb9": '------WebKitFormBoundaryIsJOK7tJBIcmrAUg\r\nContent-Disposition: form-data; name="questId"\r\n\r\n834e8702-773a-4ea5-82cd-0b8987ad8cb9\r\n------WebKitFormBoundaryIsJOK7tJBIcmrAUg\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryIsJOK7tJBIcmrAUg--\r\n',
+        #"afddae52-4e18-4a96-97db-8c82385a1ae7": '------WebKitFormBoundaryiDGPDKfKNRhgQPDf\r\nContent-Disposition: form-data; name="questId"\r\n\r\nafddae52-4e18-4a96-97db-8c82385a1ae7\r\n------WebKitFormBoundaryiDGPDKfKNRhgQPDf\r\nContent-Disposition: form-data; name="type"\r\n\r\ndiscord\r\n------WebKitFormBoundaryiDGPDKfKNRhgQPDf--\r\n',
+        #"14237ce9-121f-4288-9c2a-e596987151cf": '------WebKitFormBoundaryM7M8WsZjnX4XBebX\r\nContent-Disposition: form-data; name="value"\r\n\r\nclicked\r\n------WebKitFormBoundaryM7M8WsZjnX4XBebX\r\nContent-Disposition: form-data; name="questId"\r\n\r\n14237ce9-121f-4288-9c2a-e596987151cf\r\n------WebKitFormBoundaryM7M8WsZjnX4XBebX\r\nContent-Disposition: form-data; name="type"\r\n\r\nlink\r\n------WebKitFormBoundaryM7M8WsZjnX4XBebX--\r\n', #visit website
+        #"08ebac1b-18e4-4807-80c2-b70fa1882cd9": "", # swap on suiswap
         "5b28150f-4ee6-4e03-9607-68040987628e": '------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="value"\r\n\r\nGreat platform\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="questId"\r\n\r\n5b28150f-4ee6-4e03-9607-68040987628e\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9\r\nContent-Disposition: form-data; name="type"\r\n\r\ntext\r\n------WebKitFormBoundaryABYBEv7ZYSVicha9--\r\n'
         # share your feedback
     },
@@ -157,12 +157,6 @@ quests = {
 ,
 "0b7d648c-a626-4112-a778-e1a763b2cd79": '------WebKitFormBoundaryIqeW41uWSnmcVXCU\r\nContent-Disposition: form-data; name="questId"\r\n\r\n0b7d648c-a626-4112-a778-e1a763b2cd79\r\n------WebKitFormBoundaryIqeW41uWSnmcVXCU\r\nContent-Disposition: form-data; name="type"\r\n\r\ntwitter\r\n------WebKitFormBoundaryIqeW41uWSnmcVXCU--\r\n'
 ,
-
-
-
-
-
-
     },
     "new_quiz": {
         "4acf38d5-b00f-4585-b314-9b032535e250": '------WebKitFormBoundaryhzK2SXGGhjykAmfN\r\nContent-Disposition: form-data; name="value"\r\n\r\nBy linking your address and enter the special secrect in our airdrop website\r\n------WebKitFormBoundaryhzK2SXGGhjykAmfN\r\nContent-Disposition: form-data; name="questId"\r\n\r\n4acf38d5-b00f-4585-b314-9b032535e250\r\n------WebKitFormBoundaryhzK2SXGGhjykAmfN\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundaryhzK2SXGGhjykAmfN--\r\n'
@@ -203,27 +197,8 @@ quests = {
 ,
 "3c134740-e03f-44f4-8da9-edfb068c4c6c": '------WebKitFormBoundarybAMkYGnBJjr0ySEJ\r\nContent-Disposition: form-data; name="value"\r\n\r\nBoth A and B\r\n------WebKitFormBoundarybAMkYGnBJjr0ySEJ\r\nContent-Disposition: form-data; name="questId"\r\n\r\n3c134740-e03f-44f4-8da9-edfb068c4c6c\r\n------WebKitFormBoundarybAMkYGnBJjr0ySEJ\r\nContent-Disposition: form-data; name="type"\r\n\r\nquiz\r\n------WebKitFormBoundarybAMkYGnBJjr0ySEJ--\r\n'
 ,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-
+    },
+ "special_gift": {
+     "d4b8660d-f1a8-44c5-80bd-ab2b18fc8fff": '------WebKitFormBoundaryM1vfBRLuA5atJtX5\r\nContent-Disposition: form-data; name="questId"\r\n\r\nd4b8660d-f1a8-44c5-80bd-ab2b18fc8fff\r\n------WebKitFormBoundaryM1vfBRLuA5atJtX5\r\nContent-Disposition: form-data; name="type"\r\n\r\nnone\r\n------WebKitFormBoundaryM1vfBRLuA5atJtX5--\r\n'
+ }
 }
